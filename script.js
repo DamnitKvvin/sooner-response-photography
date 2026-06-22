@@ -1,166 +1,122 @@
-// Media data - supports both photos and videos
+// script.js - Sooner Response Photography
+// Mixed image + video support with masonry gallery and lightbox
+
 const media = [
-    {
-        type: "image",
-        src: "https://picsum.photos/id/1015/800/600",
-        thumb: "https://picsum.photos/id/1015/400/300",
-        category: "fire",
-        caption: "Structure Fire Response - Oklahoma City"
-    },
-    {
-        type: "image",
-        src: "https://picsum.photos/id/106/800/600",
-        thumb: "https://picsum.photos/id/106/400/300",
-        category: "ems",
-        caption: "Paramedics on Scene"
-    },
-    {
-        type: "video",
-        src: "https://assets.mixkit.co/videos/preview/12345/12345-large.mp4", // placeholder video
-        thumb: "https://picsum.photos/id/201/400/300",
-        category: "fire",
-        caption: "Night Firefighting Operation"
-    },
-    // Add your real media here after uploading
+    { type: "image", src: "https://ibb.co/qMGQGL3s", thumb: "https://ibb.co/qMGQGL3s", category: "fire", caption: "Night structure response - DSC 0045" },
+    { type: "image", src: "https://ibb.co/W4bmZcQS", thumb: "https://ibb.co/W4bmZcQS", category: "fire", caption: "Fire scene detail - DSC 0046" },
+    { type: "image", src: "https://ibb.co/1G4cKrTw", thumb: "https://ibb.co/1G4cKrTw", category: "fire", caption: "Apparatus on scene - DSC 0048" },
+    { type: "image", src: "https://ibb.co/CKMtmywp", thumb: "https://ibb.co/CKMtmywp", category: "ems", caption: "EMS response - DSC 0049" },
+    { type: "image", src: "https://ibb.co/fdrPNhkg", thumb: "https://ibb.co/fdrPNhkg", category: "law", caption: "Law enforcement - DSC 0050" },
+    { type: "image", src: "https://ibb.co/ynr37rFd", thumb: "https://ibb.co/ynr37rFd", category: "fire", caption: "First responders - DSC 0051" },
+    { type: "image", src: "https://ibb.co/SXPQqqQ2", thumb: "https://ibb.co/SXPQqqQ2", category: "ems", caption: "Paramedic on duty - DSC 0052" },
+    { type: "image", src: "https://ibb.co/1GqKNJnc", thumb: "https://ibb.co/1GqKNJnc", category: "fire", caption: "Training drill - DSC 0053" },
+    { type: "image", src: "https://ibb.co/xS06bVHb", thumb: "https://ibb.co/xS06bVHb", category: "law", caption: "Police operation - DSC 0054" },
+    { type: "image", src: "https://ibb.co/wt5ycNS", thumb: "https://ibb.co/wt5ycNS", category: "ems", caption: "Ambulance response - DSC 0055" },
+    { type: "image", src: "https://ibb.co/8gXjzBT0", thumb: "https://ibb.co/8gXjzBT0", category: "fire", caption: "Emergency scene - DSC 0056" },
+    { type: "image", src: "https://ibb.co/kVB8cWtB", thumb: "https://ibb.co/kVB8cWtB", category: "law", caption: "Community safety - DSC 0057" },
+    { type: "image", src: "https://ibb.co/B2zsSm8C", thumb: "https://ibb.co/B2zsSm8C", category: "fire", caption: "Heroic moment - DSC 0058" },
+    { type: "image", src: "https://ibb.co/My3B8M2x", thumb: "https://ibb.co/My3B8M2x", category: "ems", caption: "First responder care - DSC 0059" },
+    { type: "image", src: "https://ibb.co/2Y3Bh2jy", thumb: "https://ibb.co/2Y3Bh2jy", category: "fire", caption: "Blaze response - DSC 0060" },
+    { type: "image", src: "https://ibb.co/j9XQfbyL", thumb: "https://ibb.co/j9XQfbyL", category: "ems", caption: "Scene detail" },
+    { type: "image", src: "https://ibb.co/LXFTLsWk", thumb: "https://ibb.co/LXFTLsWk", category: "law", caption: "Public safety" },
+    { type: "image", src: "https://ibb.co/Jj8R4yzD", thumb: "https://ibb.co/Jj8R4yzD", category: "fire", caption: "Firefighters at work" },
+    { type: "image", src: "https://ibb.co/CKrS4s4M", thumb: "https://ibb.co/CKrS4s4M", category: "ems", caption: "Medical response" },
+    { type: "image", src: "https://ibb.co/nMmhW11n", thumb: "https://ibb.co/nMmhW11n", category: "fire", caption: "Oklahoma fire scene" },
+    { type: "image", src: "https://ibb.co/tpQ3hhkY", thumb: "https://ibb.co/tpQ3hhkY", category: "law", caption: "Law enforcement presence" },
+    { type: "image", src: "https://ibb.co/DP8s4QDN", thumb: "https://ibb.co/DP8s4QDN", category: "ems", caption: "EMS in action" },
+    { type: "image", src: "https://ibb.co/206J6zrB", thumb: "https://ibb.co/206J6zrB", category: "fire", caption: "Structure fire" },
+    { type: "image", src: "https://ibb.co/HDLKCMK5", thumb: "https://ibb.co/HDLKCMK5", category: "fire", caption: "Night operations" },
+    { type: "image", src: "https://ibb.co/S4J75QG7", thumb: "https://ibb.co/S4J75QG7", category: "ems", caption: "Responder care" },
+    { type: "image", src: "https://ibb.co/dJ2HCTYd", thumb: "https://ibb.co/dJ2HCTYd", category: "law", caption: "Police activity" },
+    { type: "image", src: "https://ibb.co/nMWPKvYF", thumb: "https://ibb.co/nMWPKvYF", category: "fire", caption: "Fire response" },
+    { type: "image", src: "https://ibb.co/8CN97ty", thumb: "https://ibb.co/8CN97ty", category: "ems", caption: "Ambulance scene" },
+    { type: "image", src: "https://ibb.co/HD4nS1zw", thumb: "https://ibb.co/HD4nS1zw", category: "fire", caption: "Emergency lighting" },
+    { type: "image", src: "https://ibb.co/gFzM272s", thumb: "https://ibb.co/gFzM272s", category: "law", caption: "Community patrol" },
+    { type: "image", src: "https://ibb.co/5XB3JScB", thumb: "https://ibb.co/5XB3JScB", category: "fire", caption: "Firefighters" },
+    { type: "image", src: "https://ibb.co/4g0rkW41", thumb: "https://ibb.co/4g0rkW41", category: "ems", caption: "Medical aid" },
+    { type: "image", src: "https://ibb.co/RGRzDMLV", thumb: "https://ibb.co/RGRzDMLV", category: "fire", caption: "Incident command" },
+    { type: "image", src: "https://ibb.co/Mkb4W5zz", thumb: "https://ibb.co/Mkb4W5zz", category: "law", caption: "Officer on scene" },
+    { type: "image", src: "https://ibb.co/bj6kY47N", thumb: "https://ibb.co/bj6kY47N", category: "ems", caption: "Paramedics" },
+    { type: "image", src: "https://ibb.co/VYy4TRtZ", thumb: "https://ibb.co/VYy4TRtZ", category: "fire", caption: "Apparatus lineup" },
+    { type: "image", src: "https://ibb.co/JWQK5Rnn", thumb: "https://ibb.co/JWQK5Rnn", category: "fire", caption: "Fire scene" },
+    { type: "image", src: "https://ibb.co/0RsLwh2x", thumb: "https://ibb.co/0RsLwh2x", category: "law", caption: "Public safety moment" }
 ];
 
-const services = [
-    {
-        title: "Incident Coverage",
-        desc: "Professional documentation of emergency scenes, training exercises, and public safety events.",
-        icon: "fas fa-fire"
-    },
-    {
-        title: "Responder Portraits",
-        desc: "Heroic individual and team portraits for awards, recruitment, or personal keepsakes.",
-        icon: "fas fa-user-shield"
-    },
-    {
-        title: "Agency Media",
-        desc: "High-quality visuals for reports, social media, recruitment campaigns, and grants.",
-        icon: "fas fa-camera-retro"
-    }
-];
-
-// Render Masonry Gallery with mixed media
-function renderGallery(filteredMedia = media) {
+function renderMedia(filteredMedia = media) {
     const grid = document.getElementById('masonry-grid');
+    if (!grid) return;
     grid.innerHTML = '';
-    
+
     filteredMedia.forEach((item, index) => {
         const div = document.createElement('div');
-        div.className = 'break-inside-avoid mb-4 group cursor-pointer relative';
-        
-        if (item.type === "image") {
-            div.innerHTML = `
+        div.className = 'break-inside-avoid mb-6 group cursor-pointer';
+        div.innerHTML = `
+            <div class="relative overflow-hidden rounded-3xl bg-zinc-900 shadow-xl">
                 <img src="${item.thumb}" 
-                     onclick="openLightbox('${item.src}', '${item.caption}', 'image')"
-                     class="masonry-img w-full rounded-2xl shadow-xl">
-                <p class="text-xs text-zinc-500 mt-3 px-1">${item.caption}</p>
-            `;
-        } else {
-            // Video thumbnail with play icon
-            div.innerHTML = `
-                <div class="relative">
-                    <img src="${item.thumb}" 
-                         onclick="openLightbox('${item.src}', '${item.caption}', 'video')"
-                         class="masonry-img w-full rounded-2xl shadow-xl">
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <i class="fas fa-play-circle text-white text-6xl drop-shadow-lg"></i>
-                    </div>
+                     alt="${item.caption}" 
+                     class="w-full h-auto object-cover aspect-video md:aspect-square masonry-img transition-all duration-300 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-4 group-hover:translate-y-0 transition-transform">
+                    <p class="text-sm font-medium text-white line-clamp-2">${item.caption}</p>
                 </div>
-                <p class="text-xs text-zinc-500 mt-3 px-1">${item.caption}</p>
-            `;
-        }
+            </div>
+        `;
+        div.onclick = () => openLightbox(item);
         grid.appendChild(div);
     });
 }
 
-// Enhanced Lightbox - supports images and videos
-let currentLightboxIndex = 0;
-
-function openLightbox(src, caption, type = 'image') {
+function openLightbox(item) {
     const lightbox = document.getElementById('lightbox');
+    const content = document.getElementById('lightbox-content');
+    const captionEl = document.getElementById('lightbox-caption');
+
+    content.innerHTML = `
+        <img src="${item.src}" alt="${item.caption}" 
+             class="max-h-[85vh] max-w-full rounded-2xl shadow-2xl">
+    `;
+
+    captionEl.textContent = item.caption;
     lightbox.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-
-    const contentContainer = document.getElementById('lightbox-content');
-    contentContainer.innerHTML = '';
-
-    if (type === 'image') {
-        contentContainer.innerHTML = `
-            <img src="${src}" alt="" class="max-h-[85vh] w-auto mx-auto rounded-2xl shadow-2xl">
-        `;
-    } else {
-        contentContainer.innerHTML = `
-            <video controls autoplay loop class="max-h-[85vh] w-auto mx-auto rounded-2xl shadow-2xl">
-                <source src="${src}" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        `;
-    }
-    
-    document.getElementById('lightbox-caption').textContent = caption;
+    lightbox.classList.add('flex');
 }
 
-// Close lightbox
 function closeLightbox() {
     const lightbox = document.getElementById('lightbox');
     lightbox.classList.add('hidden');
-    document.body.style.overflow = 'visible';
+    lightbox.classList.remove('flex');
 }
 
-// Services and other functions remain the same
-function renderServices() {
-    const container = document.querySelector('#services .grid');
-    container.innerHTML = '';
-    
-    services.forEach(service => {
-        const card = document.createElement('div');
-        card.className = 'bg-zinc-900 border border-zinc-800 rounded-3xl p-8 hover:border-red-500/50 transition-all group';
-        card.innerHTML = `
-            <div class="text-4xl mb-6 text-red-500"><i class="${service.icon}"></i></div>
-            <h3 class="text-2xl font-semibold mb-4">${service.title}</h3>
-            <p class="text-zinc-400">${service.desc}</p>
-            <button onclick="bookService('${service.title}')" 
-                    class="mt-8 text-sm px-6 py-3 border border-white/30 rounded-full hover:bg-white/5 transition-all">
-                Inquire Now →
-            </button>
-        `;
-        container.appendChild(card);
-    });
+// Category filter
+function filterCategory(cat) {
+    if (cat === 'all') {
+        renderMedia(media);
+    } else {
+        const filtered = media.filter(item => item.category === cat);
+        renderMedia(filtered);
+    }
 }
-
-function bookService(service) {
-    alert(`Thank you for your interest in ${service}!\n\nPlease reach out via the contact form or social media.`);
-}
-
-// Form
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert("Message received! I'll get back to you soon.");
-    this.reset();
-});
-
-// Smooth scroll
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) target.scrollIntoView({ behavior: 'smooth' });
-    });
-});
 
 function showAllCategories() {
-    renderGallery(media);
+    renderMedia(media);
 }
 
-// Initialize
-window.onload = function() {
-    renderGallery();
-    renderServices();
+// Keyboard escape support
+document.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") {
+        closeLightbox();
+    }
+});
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    renderMedia();
     
-    document.addEventListener('keydown', function(e) {
-        if (e.key === "Escape") closeLightbox();
-    });
-};
+    // Close lightbox when clicking outside the image
+    const lightbox = document.getElementById('lightbox');
+    if (lightbox) {
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+    }
+});
