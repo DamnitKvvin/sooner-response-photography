@@ -3,412 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ResponderLens | First Responders Photography</title>
+    <title>Sooner Response Photography</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
-        
         :root {
             --red: #dc2626;
             --blue: #1e40af;
         }
-        
-        .hero-bg {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(220,38,38,0.6)), url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
-        }
-        
-        .masonry {
-            column-count: 3;
-            column-gap: 1rem;
-        }
-        
-        @media (max-width: 768px) {
-            .masonry {
-                column-count: 2;
-            }
-        }
-        
-        .masonry-item {
-            break-inside: avoid;
-            margin-bottom: 1rem;
-        }
-        
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.95);
-            z-index: 1000;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .nav-link {
-            position: relative;
-        }
-        
-        .nav-link:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background: linear-gradient(to right, #dc2626, #1e40af);
-            transition: width 0.3s;
-        }
-        
-        .nav-link:hover:after {
-            width: 100%;
-        }
     </style>
 </head>
-<body class="bg-zinc-950 text-zinc-100 font-sans">
+<body class="bg-zinc-950 text-zinc-100">
     <!-- Navbar -->
-    <nav class="fixed top-0 w-full bg-zinc-950/90 backdrop-blur-md z-50 border-b border-zinc-800">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+    <nav class="fixed top-0 w-full bg-zinc-950/95 backdrop-blur z-50 border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="w-8 h-8 bg-gradient-to-br from-red-600 to-blue-600 rounded flex items-center justify-center">
-                    <i class="fa-solid fa-camera text-white"></i>
+                <div class="w-9 h-9 bg-gradient-to-br from-red-600 via-red-500 to-blue-600 rounded-xl flex items-center justify-center">
+                    <i class="fa-solid fa-shield-halved text-white text-xl"></i>
                 </div>
-                <span class="text-2xl font-bold tracking-tighter">ResponderLens</span>
+                <div>
+                    <span class="text-2xl font-bold tracking-tighter">Sooner Response</span>
+                    <span class="text-xs block -mt-1 text-zinc-400">Photography</span>
+                </div>
             </div>
-            <div class="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest">
-                <a href="#gallery" class="nav-link hover:text-red-400 transition-colors">Gallery</a>
-                <a href="#about" class="nav-link hover:text-red-400 transition-colors">About</a>
-                <a href="#services" class="nav-link hover:text-red-400 transition-colors">Services</a>
-                <a href="#contact" class="nav-link hover:text-red-400 transition-colors">Contact</a>
+            <div class="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest font-medium">
+                <a href="index.html" class="nav-link hover:text-red-400 transition-colors">Home</a>
+                <a href="gallery/index.html" class="nav-link hover:text-red-400 transition-colors">Gallery</a>
+                <a href="about/index.html" class="nav-link hover:text-red-400 transition-colors">About</a>
+                <a href="services/index.html" class="nav-link hover:text-red-400 transition-colors">Services</a>
+                <a href="contact/index.html" class="nav-link hover:text-red-400 transition-colors">Contact</a>
             </div>
-            <a href="#contact" 
-               class="px-6 py-3 bg-gradient-to-r from-red-600 to-blue-600 hover:from-red-700 hover:to-blue-700 rounded-full text-sm font-medium transition-all">
-                Book a Shoot
+            <a href="contact/index.html" class="px-6 py-2.5 bg-gradient-to-r from-red-600 to-blue-600 hover:from-red-700 hover:to-blue-700 rounded-full text-sm font-semibold transition-all flex items-center gap-2">
+                <i class="fa-solid fa-calendar"></i>
+                Book Now
             </a>
         </div>
     </nav>
 
     <!-- Hero -->
-    <section class="hero-bg h-screen flex items-center justify-center text-center pt-20">
-        <div class="max-w-4xl mx-auto px-6">
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.65),rgba(220,38,38,0.4)),url('https://picsum.photos/id/1015/2000/1200')] bg-cover bg-center"></div>
+        <div class="relative z-10 text-center px-6 max-w-5xl mx-auto pt-20">
             <h1 class="text-6xl md:text-7xl font-bold tracking-tighter mb-6 leading-none">
-                Capturing the <span class="bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-blue-400">Bravery</span>
+                Capturing <span class="bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-blue-400">Heroes</span>
             </h1>
-            <p class="text-xl md:text-2xl text-zinc-300 max-w-lg mx-auto mb-10">
-                First Responders Photography • EMS • Fire • Law Enforcement
-            </p>
+            <p class="text-2xl text-zinc-300 mb-10">Public safety media dedicated to Oklahoma's first responders and communities</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#gallery" 
-                   class="px-8 py-4 bg-white text-zinc-950 font-semibold rounded-full hover:bg-zinc-200 transition">
-                    View Gallery
-                </a>
-                <a href="#contact" 
-                   class="px-8 py-4 border border-white/70 hover:bg-white/10 rounded-full transition">
-                    Get in Touch
-                </a>
+                <a href="gallery/index.html" class="px-8 py-4 bg-white text-zinc-900 rounded-full font-semibold text-lg hover:bg-zinc-100 transition">View Gallery</a>
+                <a href="contact/index.html" class="px-8 py-4 border-2 border-white/70 hover:border-white rounded-full font-semibold text-lg transition">Get In Touch</a>
             </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+            <i class="fa-solid fa-chevron-down text-3xl"></i>
         </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="py-24 bg-zinc-900">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 class="text-5xl font-bold tracking-tighter mb-8">Documenting Those Who Serve</h2>
-                    <div class="space-y-6 text-zinc-300 text-lg">
-                        <p>I'm a dedicated photographer specializing in capturing the intensity, humanity, and heroism of emergency services personnel in action.</p>
-                        <p>From the adrenaline of a structure fire to quiet moments of care in the back of an ambulance — my lens honors the commitment of first responders.</p>
-                    </div>
-                    <div class="mt-10 flex gap-8">
-                        <div>
-                            <div class="text-4xl font-bold text-red-500">500+</div>
-                            <div class="text-sm uppercase tracking-widest">Images Captured</div>
-                        </div>
-                        <div>
-                            <div class="text-4xl font-bold text-blue-500">50+</div>
-                            <div class="text-sm uppercase tracking-widest">Shoots Completed</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="relative">
-                    <img src="https://picsum.photos/id/1016/800/600" 
-                         class="rounded-3xl shadow-2xl" alt="Photographer in action">
-                    <div class="absolute -bottom-6 -right-6 bg-zinc-800 p-6 rounded-2xl border border-red-500/30">
-                        <div class="flex items-center gap-4">
-                            <i class="fa-solid fa-shield-halved text-3xl text-red-500"></i>
+    <!-- Quick Categories -->
+    <section class="py-20 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Featured Categories</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <a href="gallery/index.html#fire" class="group">
+                    <div class="relative h-80 rounded-3xl overflow-hidden">
+                        <img src="https://picsum.photos/id/1016/800/600" class="w-full h-full object-cover group-hover:scale-105 transition" alt="Fire">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8">
                             <div>
-                                <div class="font-semibold">Honoring the Badge</div>
-                                <div class="text-sm text-zinc-400">Every frame tells a story of service</div>
+                                <h3 class="text-3xl font-bold">Fire &amp; Rescue</h3>
+                                <p class="text-red-400">Oklahoma's bravest</p>
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
+                <!-- More categories -->
             </div>
         </div>
     </section>
 
-    <!-- Gallery -->
-    <section id="gallery" class="py-24 bg-black">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex justify-between items-end mb-12">
-                <div>
-                    <h2 class="text-5xl font-bold tracking-tighter">Featured Work</h2>
-                    <p class="text-zinc-400 mt-3">Moments of courage, captured with respect</p>
-                </div>
-                <div class="hidden md:flex gap-2">
-                    <button onclick="filterGallery('all')" class="active-filter px-5 py-2 rounded-full text-sm border border-zinc-700 hover:border-red-500">All</button>
-                    <button onclick="filterGallery('ems')" class="px-5 py-2 rounded-full text-sm border border-zinc-700 hover:border-red-500">EMS</button>
-                    <button onclick="filterGallery('fire')" class="px-5 py-2 rounded-full text-sm border border-zinc-700 hover:border-red-500">Fire</button>
-                    <button onclick="filterGallery('police')" class="px-5 py-2 rounded-full text-sm border border-zinc-700 hover:border-red-500">LE</button>
-                </div>
+    <!-- About Teaser -->
+    <section id="about" class="py-20">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-5xl font-bold tracking-tighter mb-6">Sooner Response Photography</h2>
+                <p class="text-lg text-zinc-300">Capturing Heroes Across Oklahoma. Public safety media dedicated to highlighting Oklahoma's first responders and communities.</p>
+                <a href="about/index.html" class="inline-flex items-center gap-3 mt-8 text-red-400 hover:text-red-300">Learn more about us <i class="fa-solid fa-arrow-right"></i></a>
             </div>
-
-            <div id="masonry-gallery" class="masonry">
-                <!-- Images populated by JS -->
+            <div class="rounded-3xl overflow-hidden">
+                <img src="https://picsum.photos/id/106/800/600" class="w-full" alt="Team">
             </div>
         </div>
     </section>
 
-    <!-- Services / Booking -->
-    <section id="services" class="py-24 bg-zinc-900">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-5xl font-bold tracking-tighter text-center mb-16">Services</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-zinc-800 p-8 rounded-3xl border border-zinc-700 hover:border-red-500 transition">
-                    <i class="fa-solid fa-fire text-4xl text-orange-500 mb-6"></i>
-                    <h3 class="text-2xl font-semibold mb-4">Event Coverage</h3>
-                    <p class="text-zinc-400 mb-6">Full incident documentation, training exercises, and public events.</p>
-                    <div class="text-3xl font-bold text-red-400">$650+</div>
-                    <button onclick="showBookingModal()" 
-                            class="mt-8 w-full py-4 bg-gradient-to-r from-red-600 to-orange-600 rounded-2xl font-medium">
-                        Book Event Coverage
-                    </button>
-                </div>
-                
-                <div class="bg-zinc-800 p-8 rounded-3xl border border-zinc-700 hover:border-blue-500 transition">
-                    <i class="fa-solid fa-ambulance text-4xl text-blue-500 mb-6"></i>
-                    <h3 class="text-2xl font-semibold mb-4">Portrait Sessions</h3>
-                    <p class="text-zinc-400 mb-6">Individual or team portraits that capture strength and dedication.</p>
-                    <div class="text-3xl font-bold text-blue-400">$250+</div>
-                    <button onclick="showBookingModal()" 
-                            class="mt-8 w-full py-4 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl font-medium">
-                        Schedule Portrait
-                    </button>
-                </div>
-                
-                <div class="bg-zinc-800 p-8 rounded-3xl border border-zinc-700 hover:border-red-500 transition">
-                    <i class="fa-solid fa-book text-4xl text-red-500 mb-6"></i>
-                    <h3 class="text-2xl font-semibold mb-4">Prints &amp; Licensing</h3>
-                    <p class="text-zinc-400 mb-6">High-quality prints, wall art, and commercial licensing for departments.</p>
-                    <button onclick="showBookingModal()" 
-                            class="mt-8 w-full py-4 bg-white text-zinc-900 rounded-2xl font-medium">
-                        Inquire About Prints
-                    </button>
-                </div>
+    <footer class="bg-black py-12 border-t border-zinc-800">
+        <div class="max-w-7xl mx-auto px-6 text-center text-zinc-400">
+            <p>&copy; 2026 Sooner Response Photography. All rights reserved.</p>
+            <div class="flex justify-center gap-6 mt-6">
+                <a href="https://www.facebook.com/profile.php?id=61590723851659" target="_blank"><i class="fa-brands fa-facebook text-2xl hover:text-red-400"></i></a>
+                <a href="https://www.instagram.com/soonerresponsepics" target="_blank"><i class="fa-brands fa-instagram text-2xl hover:text-red-400"></i></a>
+                <a href="https://www.tiktok.com/@soonerresponse" target="_blank"><i class="fa-brands fa-tiktok text-2xl hover:text-red-400"></i></a>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="py-24 bg-black">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-5xl font-bold tracking-tighter">Let's Capture the Next Story</h2>
-                <p class="mt-4 text-zinc-400">Reach out for commissions, collaborations, or inquiries</p>
-            </div>
-            
-            <form id="contact-form" class="space-y-8">
-                <div class="grid md:grid-cols-2 gap-8">
-                    <input type="text" placeholder="Your Name" required
-                           class="bg-zinc-900 border border-zinc-700 focus:border-red-500 rounded-2xl px-6 py-5 outline-none transition">
-                    <input type="email" placeholder="Email Address" required
-                           class="bg-zinc-900 border border-zinc-700 focus:border-red-500 rounded-2xl px-6 py-5 outline-none transition">
-                </div>
-                <input type="text" placeholder="Subject (Event, Portrait, etc.)" 
-                       class="w-full bg-zinc-900 border border-zinc-700 focus:border-red-500 rounded-2xl px-6 py-5 outline-none transition">
-                <textarea placeholder="Tell me about your project..." rows="6"
-                          class="w-full bg-zinc-900 border border-zinc-700 focus:border-red-500 rounded-2xl px-6 py-5 outline-none transition resize-none"></textarea>
-                
-                <button type="submit"
-                        class="w-full py-6 bg-gradient-to-r from-red-600 via-blue-600 to-red-600 text-lg font-semibold rounded-3xl hover:brightness-110 transition">
-                    SEND MESSAGE
-                </button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-zinc-950 border-t border-zinc-800 py-16">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
-            <div>
-                <div class="flex items-center gap-3 mb-6">
-                    <div class="w-8 h-8 bg-gradient-to-br from-red-600 to-blue-600 rounded flex items-center justify-center">
-                        <i class="fa-solid fa-camera"></i>
-                    </div>
-                    <span class="text-2xl font-bold">ResponderLens</span>
-                </div>
-                <p class="text-zinc-400">Honoring first responders through powerful photography.</p>
-            </div>
-            
-            <div>
-                <h4 class="font-semibold mb-6 text-red-400">Quick Links</h4>
-                <ul class="space-y-3 text-sm">
-                    <li><a href="#gallery" class="hover:text-red-400">Gallery</a></li>
-                    <li><a href="#services" class="hover:text-red-400">Services</a></li>
-                    <li><a href="#about" class="hover:text-red-400">About</a></li>
-                </ul>
-            </div>
-            
-            <div>
-                <h4 class="font-semibold mb-6 text-blue-400">Connect</h4>
-                <div class="flex gap-6 text-2xl">
-                    <a href="#" class="hover:text-red-400"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="hover:text-red-400"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#" class="hover:text-red-400"><i class="fa-brands fa-linkedin"></i></a>
-                </div>
-            </div>
-            
-            <div>
-                <h4 class="font-semibold mb-6">Get Updates</h4>
-                <div class="text-sm text-zinc-400">New work and behind-the-scenes stories.</div>
-                <div class="mt-4 flex">
-                    <input type="email" placeholder="your@email.com" 
-                           class="bg-zinc-900 border border-zinc-700 px-4 py-3 rounded-l-2xl text-sm flex-1">
-                    <button class="bg-red-600 px-8 rounded-r-2xl">→</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="text-center text-xs text-zinc-500 mt-20">
-            © 2026 ResponderLens Photography. All rights reserved.
         </div>
     </footer>
 
-    <!-- Lightbox -->
-    <div id="lightbox" class="lightbox">
-        <div class="relative max-w-5xl w-full mx-4">
-            <button onclick="closeLightbox()" 
-                    class="absolute -top-12 right-0 text-white text-4xl hover:text-red-400">&times;</button>
-            <img id="lightbox-image" src="" class="w-full rounded-3xl shadow-2xl" alt="">
-            <div id="lightbox-caption" class="text-center mt-4 text-zinc-400"></div>
-        </div>
-    </div>
-
-    <!-- Booking Modal -->
-    <div id="booking-modal" class="hidden fixed inset-0 bg-black/90 z-[1100] flex items-center justify-center">
-        <div class="bg-zinc-900 max-w-md w-full mx-4 rounded-3xl p-10">
-            <h3 class="text-3xl font-bold mb-8">Book Your Session</h3>
-            <form id="booking-form" class="space-y-6">
-                <!-- Simple fields -->
-                <input type="text" placeholder="Name" class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-4">
-                <input type="email" placeholder="Email" class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-4">
-                <input type="tel" placeholder="Phone" class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-4">
-                <textarea placeholder="Details about the shoot" rows="4" class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-4"></textarea>
-                
-                <div class="flex gap-4">
-                    <button type="button" onclick="closeBookingModal()" 
-                            class="flex-1 py-4 border border-zinc-600 rounded-2xl">Cancel</button>
-                    <button type="submit" 
-                            class="flex-1 py-4 bg-gradient-to-r from-red-600 to-blue-600 rounded-2xl">Submit Request</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <script>
-        // Tailwind script already loaded via CDN
-        
-        // Sample images - replace with your own URLs
-        const photos = [
-            { src: "https://picsum.photos/id/1015/800/1000", category: "fire", caption: "Structure fire response - Night operations" },
-            { src: "https://picsum.photos/id/133/800/600", category: "ems", caption: "EMS crew on scene" },
-            { src: "https://picsum.photos/id/201/600/900", category: "police", caption: "Law enforcement patrol" },
-            { src: "https://picsum.photos/id/251/800/1200", category: "fire", caption: "Firefighter ladder rescue drill" },
-            { src: "https://picsum.photos/id/316/700/900", category: "ems", caption: "Paramedic caring for patient" },
-            { src: "https://picsum.photos/id/1018/800/600", category: "police", caption: "K9 unit training" },
-            // Add more as needed
-        ];
-
-        function renderGallery(filteredPhotos = photos) {
-            const container = document.getElementById('masonry-gallery');
-            container.innerHTML = '';
-            
-            filteredPhotos.forEach((photo, index) => {
-                const div = document.createElement('div');
-                div.className = 'masonry-item cursor-pointer group';
-                div.innerHTML = `
-                    <img src="${photo.src}" 
-                         class="w-full rounded-3xl transition-all duration-300 group-hover:scale-[1.02] shadow-xl"
-                         alt="${photo.caption}">
-                    <div class="mt-3 text-xs uppercase tracking-widest text-zinc-500">${photo.caption}</div>
-                `;
-                div.onclick = () => openLightbox(photo);
-                container.appendChild(div);
-            });
-        }
-
-        function filterGallery(cat) {
-            if (cat === 'all') {
-                renderGallery(photos);
-            } else {
-                const filtered = photos.filter(p => p.category === cat);
-                renderGallery(filtered);
-            }
-        }
-
-        let currentPhoto = null;
-
-        function openLightbox(photo) {
-            currentPhoto = photo;
-            document.getElementById('lightbox-image').src = photo.src;
-            document.getElementById('lightbox-caption').textContent = photo.caption;
-            document.getElementById('lightbox').style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox() {
-            document.getElementById('lightbox').style.display = 'none';
-            document.body.style.overflow = 'visible';
-        }
-
-        function showBookingModal() {
-            document.getElementById('booking-modal').classList.remove('hidden');
-        }
-
-        function closeBookingModal() {
-            document.getElementById('booking-modal').classList.add('hidden');
-        }
-
-        // Form submissions (demo)
-        document.getElementById('contact-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert("Thank you! Your message has been received. I'll get back to you shortly.");
-            e.target.reset();
-        });
-
-        document.getElementById('booking-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert("Booking request received! I'll contact you within 24 hours.");
-            closeBookingModal();
-            e.target.reset();
-        });
-
-        // Keyboard escape
-        document.addEventListener('keydown', (e) => {
-            if (e.key === "Escape") {
-                const lightbox = document.getElementById('lightbox');
-                if (lightbox.style.display === 'flex') closeLightbox();
-                else closeBookingModal();
-            }
-        });
-
-        // Initialize
-        window.onload = () => {
-            renderGallery();
-        };
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
