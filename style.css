@@ -1,23 +1,67 @@
-/* Custom styles beyond Tailwind */
+/* Base Styles for Sooner Response Photography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
+
 body {
     font-family: 'Inter', system_ui, sans-serif;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: 'Playfair Display', sans-serif;
 }
 
-.masonry-img {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+.nav-link {
+    position: relative;
 }
 
-.masonry-img:hover {
+.nav-link:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background: linear-gradient(to right, #dc2626, #1e40af);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover:after {
+    width: 100%;
+}
+
+.masonry {
+    column-count: 3;
+    column-gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .masonry {
+        column-count: 2;
+    }
+}
+
+.masonry-item {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.masonry-item:hover {
     transform: scale(1.03);
-    filter: brightness(1.1);
-    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
 }
 
-/* Red/Blue emergency light accents */
-.gradient-red-blue {
-    background: linear-gradient(90deg, #991b1b, #1e40af);
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.98);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.lightbox img {
+    max-height: 90vh;
+    max-width: 90vw;
+    object-fit: contain;
 }
