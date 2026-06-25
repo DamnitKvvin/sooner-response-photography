@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Sooner Response Photography for first responder photography, event coverage, and public safety media projects in Oklahoma.">
+    <meta name="keywords" content="book photographer Oklahoma, first responder photographer, fire department photography">
+    
     <title>Contact - Sooner Response Photography</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -43,8 +48,7 @@
                 <p class="text-zinc-400 mt-4">Ready to document your agency's important moments?</p>
             </div>
 
-            <!-- Formspree Integrated Here -->
-            <form id="contact-form" action="https://formspree.io/f/xzdleppv" method="POST" class="space-y-6 bg-zinc-900 p-10 rounded-3xl">
+            <form action="https://formspree.io/f/xzdleppv" method="POST" class="space-y-6 bg-zinc-900 p-10 rounded-3xl">
                 <div>
                     <label class="block text-sm uppercase tracking-widest mb-2">Your Name</label>
                     <input type="text" name="name" required class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-4 focus:outline-none focus:border-red-500">
@@ -66,14 +70,42 @@
                     Send Message
                 </button>
             </form>
-
-            <div class="mt-12 flex flex-col md:flex-row gap-8 justify-center text-center">
-                <a href="https://www.facebook.com/profile.php?id=61590723851659" target="_blank" class="flex items-center justify-center gap-3 hover:text-red-500"><i class="fab fa-facebook text-2xl"></i> Facebook</a>
-                <a href="https://www.instagram.com/soonerresponsepics" target="_blank" class="flex items-center justify-center gap-3 hover:text-red-500"><i class="fab fa-instagram text-2xl"></i> Instagram</a>
-                <a href="https://www.tiktok.com/@soonerresponse" target="_blank" class="flex items-center justify-center gap-3 hover:text-red-500"><i class="fab fa-tiktok text-2xl"></i> TikTok</a>
-            </div>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-900 border-t border-zinc-800 py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-br from-red-600 to-blue-600 rounded-2xl flex items-center justify-center">
+                            <i class="fas fa-camera text-white"></i>
+                        </div>
+                        <span class="text-xl font-bold tracking-tighter">Sooner Response</span>
+                    </div>
+                    <p class="text-zinc-400 text-sm">Capturing Heroes Across Oklahoma</p>
+                </div>
+                
+                <div class="flex gap-8 text-sm">
+                    <a href="index.html" class="hover:text-red-500">Home</a>
+                    <a href="gallery.html" class="hover:text-red-500">Gallery</a>
+                    <a href="services.html" class="hover:text-red-500">Services</a>
+                    <a href="about.html" class="hover:text-red-500">About</a>
+                    <a href="contact.html" class="hover:text-red-500">Contact</a>
+                </div>
+
+                <div class="text-center md:text-right">
+                    <div class="flex justify-center md:justify-end gap-6 text-2xl mb-4">
+                        <a href="https://www.facebook.com/profile.php?id=61590723851659" target="_blank" class="hover:text-red-500"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/soonerresponsepics" target="_blank" class="hover:text-red-500"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@soonerresponse" target="_blank" class="hover:text-red-500"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                    <p class="text-xs text-zinc-500">&copy; 2026 Sooner Response Photography. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
