@@ -3,62 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sooner Response Photography - Capturing Oklahoma's first responders and public safety heroes. Fire, EMS, Law Enforcement photography across Oklahoma.">
+    <meta name="keywords" content="Oklahoma photography, first responders, fire photography, EMS photography, law enforcement, public safety media">
+    <meta name="author" content="Sooner Response Photography">
+    
     <title>Sooner Response Photography | Oklahoma First Responders</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="favicon.ico">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
-        body { font-family: 'Inter', system_ui, sans-serif; }
-        h1, h2, h3 { font-family: 'Playfair Display', sans-serif; }
     </style>
 </head>
 <body class="bg-zinc-950 text-white">
-    <!-- Navbar -->
-    <nav class="fixed top-0 w-full bg-zinc-950/95 backdrop-blur-md z-50 border-b border-zinc-800">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <div class="w-9 h-9 bg-gradient-to-br from-red-600 to-blue-600 rounded-2xl flex items-center justify-center">
-                    <i class="fas fa-camera text-white text-xl"></i>
-                </div>
-                <span class="text-2xl font-bold tracking-tighter">Sooner Response</span>
-            </div>
-            <div class="hidden md:flex items-center space-x-8 text-sm uppercase tracking-widest font-medium">
-                <a href="index.html" class="hover:text-red-500 transition-colors">Home</a>
-                <a href="gallery.html" class="hover:text-red-500 transition-colors">Gallery</a>
-                <a href="services.html" class="hover:text-red-500 transition-colors">Services</a>
-                <a href="about.html" class="hover:text-red-500 transition-colors">About</a>
-                <a href="contact.html" class="hover:text-red-500 transition-colors">Contact</a>
-            </div>
-            <a href="contact.html" class="px-6 py-3 bg-gradient-to-r from-red-600 to-blue-600 rounded-full font-medium hover:brightness-110 transition-all">
-                Book a Shoot
-            </a>
-        </div>
-    </nav>
+    <!-- Navbar (same) -->
+    <!-- ... your existing navbar ... -->
 
-    <!-- Hero -->
-    <section class="min-h-screen flex items-center relative overflow-hidden">
-        <div class="absolute inset-0 bg-[radial-gradient(at_bottom_right,#991b1b_0%,transparent_50%)] opacity-40"></div>
-        <div class="absolute inset-0 bg-[radial-gradient(at_top_left,#1e40af_0%,transparent_50%)] opacity-40"></div>
-        
-        <div class="max-w-7xl mx-auto px-6 pt-20 relative z-10">
-            <div class="max-w-3xl">
-                <h1 class="text-6xl md:text-7xl font-bold leading-none tracking-tighter mb-6">
-                    CAPTURING<br>OKLAHOMA'S<br><span class="bg-gradient-to-r from-red-500 via-blue-500 to-red-500 bg-clip-text text-transparent">HEROES</span>
-                </h1>
-                <p class="text-xl text-zinc-400 mb-10 max-w-md">Public safety media dedicated to highlighting Oklahoma's first responders and communities.</p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="gallery.html" class="px-8 py-4 bg-white text-zinc-900 rounded-full font-semibold flex items-center gap-3 hover:bg-zinc-100 transition-all">View Gallery →</a>
-                    <a href="contact.html" class="px-8 py-4 border border-white/40 rounded-full font-medium hover:bg-white/10 transition-all">Get In Touch</a>
+    <!-- Hero Section -->
+    <!-- ... your existing hero ... -->
+
+    <!-- Footer -->
+    <footer class="bg-zinc-900 border-t border-zinc-800 py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-br from-red-600 to-blue-600 rounded-2xl flex items-center justify-center">
+                            <i class="fas fa-camera text-white"></i>
+                        </div>
+                        <span class="text-xl font-bold tracking-tighter">Sooner Response</span>
+                    </div>
+                    <p class="text-zinc-400 text-sm">Capturing Heroes Across Oklahoma</p>
+                </div>
+                
+                <div class="flex flex-col md:flex-row gap-8 text-center md:text-left">
+                    <div>
+                        <a href="index.html" class="block hover:text-red-500 mb-2">Home</a>
+                        <a href="gallery.html" class="block hover:text-red-500 mb-2">Gallery</a>
+                        <a href="services.html" class="block hover:text-red-500">Services</a>
+                    </div>
+                    <div>
+                        <a href="about.html" class="block hover:text-red-500 mb-2">About</a>
+                        <a href="contact.html" class="block hover:text-red-500">Contact</a>
+                    </div>
+                </div>
+
+                <div class="text-center md:text-right">
+                    <div class="flex justify-center md:justify-end gap-6 text-2xl mb-4">
+                        <a href="https://www.facebook.com/profile.php?id=61590723851659" target="_blank" class="hover:text-red-500"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/soonerresponsepics" target="_blank" class="hover:text-red-500"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@soonerresponse" target="_blank" class="hover:text-red-500"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                    <p class="text-xs text-zinc-500">&copy; 2026 Sooner Response Photography. All Rights Reserved.</p>
                 </div>
             </div>
         </div>
-        
-        <div class="absolute bottom-10 left-1/2 text-center">
-            <div class="text-xs tracking-widest text-zinc-500 mb-2">SCROLL FOR MORE</div>
-            <i class="fas fa-chevron-down animate-bounce text-2xl"></i>
-        </div>
-    </section>
+    </footer>
 
     <script src="script.js"></script>
 </body>
