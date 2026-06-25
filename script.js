@@ -18,7 +18,7 @@ const media = [
     { type: "image", src: "https://i.ibb.co/RGwsbY3C/DSC-0158.jpg", thumb: "https://i.ibb.co/RGwsbY3C/DSC-0158.jpg", caption: "Ladder 1 - McAlester Fire" },
     { type: "image", src: "https://i.ibb.co/Q3gW2xRb/DSC-0160.jpg", thumb: "https://i.ibb.co/Q3gW2xRb/DSC-0160.jpg", caption: "Ladder 1 - McAlester Fire" },
     { type: "image", src: "https://i.ibb.co/1GQHSXXd/DSC-0198.jpg", thumb: "https://i.ibb.co/1GQHSXXd/DSC-0198.jpg", caption: "Medic 2 - McAlester Fire" },
-    { type: "image", src: "https://i.ibb.co/TMCNJqJb/DSC-0186.jpg", thumb: "https://i.ibb.co/TMCNJqJb/DSC-0186.jpg", caption: "Medic 2 - McAlester Fire" },
+    { type: "image", src: "https://i.ibb.co/TMCNJqJb/DSC-0186.jpg", thumb: "https://i.ibb.co/TMCNJqJb/DSC-0186.jpg", caption: "Medic 2 - McAlester Fire" }
 ];
 
 function renderMedia() {
@@ -32,10 +32,12 @@ function renderMedia() {
         div.className = 'break-inside-avoid mb-6 group cursor-pointer';
         div.innerHTML = `
             <div class="relative overflow-hidden rounded-3xl bg-zinc-900 shadow-2xl">
-                <img src="${item.thumb}" alt="${item.caption}" 
+                <img src="${item.thumb}" 
+                     alt="${item.caption}" 
+                     loading="lazy"
                      class="w-full h-auto object-cover masonry-img transition-transform duration-300 group-hover:scale-105">
                 <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 p-4">
-                    <p class="text-sm text-white">${item.caption}</p>
+                    <p class="text-sm text-white line-clamp-2">${item.caption}</p>
                 </div>
             </div>
         `;
@@ -51,7 +53,11 @@ function openLightbox(item) {
     
     if (!lightbox || !content) return;
     
-    content.innerHTML = `<img src="${item.src}" alt="${item.caption}" class="max-h-[85vh] w-auto max-w-full rounded-2xl shadow-2xl">`;
+    content.innerHTML = `
+        <img src="${item.src}" 
+             alt="${item.caption}" 
+             class="max-h-[85vh] w-auto max-w-full rounded-2xl shadow-2xl">
+    `;
     captionEl.textContent = item.caption;
     
     lightbox.classList.remove('hidden');
@@ -69,22 +75,19 @@ function closeLightbox() {
 // ====================== FORM HANDLING ======================
 function initContactForm() {
     const form = document.getElementById('contact-form');
-    if (!form) return;   // Safe for other pages
+    if (!form) return;
 
-    form.addEventListener('submit', function(e) {
-        // Formspree will handle the actual submission now
-        // This is just for UX feedback
+    form.addEventListener('submit', function() {
         const btn = form.querySelector('button[type="submit"]');
         if (btn) {
             const originalText = btn.textContent;
             btn.textContent = 'Sending...';
             btn.disabled = true;
 
-            // Optional: Reset after submission (Formspree redirects anyway)
             setTimeout(() => {
                 btn.textContent = originalText;
                 btn.disabled = false;
-            }, 2000);
+            }, 2500);
         }
     });
 }
@@ -101,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Keyboard escape
+    // Keyboard escape support
     document.addEventListener('keydown', (e) => {
         if (e.key === "Escape") closeLightbox();
     });
