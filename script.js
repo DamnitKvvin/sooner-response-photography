@@ -64,15 +64,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    // Simple form submission
-    const form = document.getElementById('contact-form');
-    if (form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert("Thank you! Your message has been received. I'll get back to you soon.");
-            form.reset();
-        });
-    }
+// Contact Form Handling
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const btn = document.getElementById('submit-btn');
+    const originalText = btn.textContent;
+    
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    // For now: Show success message (replace with Formspree later)
+    setTimeout(() => {
+        alert("Message sent! I'll get back to you soon.");
+        document.getElementById('contact-form').reset();
+        btn.textContent = originalText;
+        btn.disabled = false;
+    }, 800);
+});
     
     // Keyboard escape
     document.addEventListener('keydown', (e) => {
