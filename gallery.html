@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Sooner Response Photography</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
+        body { font-family: 'Inter', system_ui, sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', sans-serif; }
+        .masonry-img { transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1); }
+        .masonry-img:hover { transform: scale(1.03); filter: brightness(1.08); }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-zinc-950/95 backdrop-blur-md z-50 border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-9 h-9 bg-gradient-to-br from-red-600 to-blue-600 rounded-2xl flex items-center justify-center">
+                    <i class="fas fa-camera text-white text-xl"></i>
+                </div>
+                <span class="text-2xl font-bold tracking-tighter">Sooner Response</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8 text-sm uppercase tracking-widest font-medium">
+                <a href="index.html" class="hover:text-red-500 transition-colors">Home</a>
+                <a href="gallery.html" class="hover:text-red-500 transition-colors">Gallery</a>
+                <a href="services.html" class="hover:text-red-500 transition-colors">Services</a>
+                <a href="about.html" class="hover:text-red-500 transition-colors">About</a>
+                <a href="contact.html" class="hover:text-red-500 transition-colors">Contact</a>
+            </div>
+            <a href="contact.html" class="px-6 py-3 bg-gradient-to-r from-red-600 to-blue-600 rounded-full font-medium hover:brightness-110 transition-all">
+                Book a Shoot
+            </a>
+        </div>
+    </nav>
+
+    <section class="pt-24 pb-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-red-500 uppercase tracking-widest text-sm">Portfolio</span>
+                <h1 class="text-5xl md:text-6xl font-bold tracking-tighter mt-3">Moments That Matter</h1>
+                <p class="text-zinc-400 mt-4 max-w-md mx-auto">Capturing the bravery, dedication, and service of Oklahoma's first responders.</p>
+            </div>
+
+            <div id="masonry-grid" class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+                <!-- Populated by script.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="hidden fixed inset-0 bg-black/95 z-[100] flex items-center justify-center p-4">
+        <div class="max-w-5xl w-full relative">
+            <button onclick="closeLightbox()" class="absolute -top-12 right-4 text-5xl text-white hover:text-red-500 z-10">&times;</button>
+            <div id="lightbox-content" class="flex justify-center"></div>
+            <div id="lightbox-caption" class="text-center mt-6 text-zinc-300 text-lg"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
