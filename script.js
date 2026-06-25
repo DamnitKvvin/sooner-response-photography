@@ -35,6 +35,7 @@ function renderMedia() {
                 <img src="${item.thumb}" 
                      alt="${item.caption}" 
                      loading="lazy"
+                     decoding="async"
                      class="w-full h-auto object-cover masonry-img transition-transform duration-300 group-hover:scale-105">
                 <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 p-4">
                     <p class="text-sm text-white line-clamp-2">${item.caption}</p>
