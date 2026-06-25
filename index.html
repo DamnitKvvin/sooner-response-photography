@@ -18,27 +18,50 @@
     </style>
 </head>
 <body class="bg-zinc-950 text-white">
-    <!-- Navbar -->
-    <nav class="fixed top-0 w-full bg-zinc-950/95 backdrop-blur-md z-50 border-b border-zinc-800">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <div class="w-9 h-9 bg-gradient-to-br from-red-600 to-blue-600 rounded-2xl flex items-center justify-center">
-                    <i class="fas fa-camera text-white text-xl"></i>
-                </div>
-                <span class="text-2xl font-bold tracking-tighter">Sooner Response</span>
+<!-- Navbar -->
+<nav class="fixed top-0 w-full bg-zinc-950/95 backdrop-blur-md z-50 border-b border-zinc-800">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+        <div class="flex items-center space-x-3">
+            <div class="w-9 h-9 bg-gradient-to-br from-red-600 to-blue-600 rounded-2xl flex items-center justify-center">
+                <i class="fas fa-camera text-white text-xl"></i>
             </div>
-            <div class="hidden md:flex items-center space-x-8 text-sm uppercase tracking-widest font-medium">
-                <a href="index.html" class="hover:text-red-500 transition-colors">Home</a>
-                <a href="gallery.html" class="hover:text-red-500 transition-colors">Gallery</a>
-                <a href="services.html" class="hover:text-red-500 transition-colors">Services</a>
-                <a href="about.html" class="hover:text-red-500 transition-colors">About</a>
-                <a href="contact.html" class="hover:text-red-500 transition-colors">Contact</a>
-            </div>
-            <a href="contact.html" class="px-6 py-3 bg-gradient-to-r from-red-600 to-blue-600 rounded-full font-medium hover:brightness-110 transition-all">
+            <span class="text-2xl font-bold tracking-tighter">Sooner Response</span>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8 text-sm uppercase tracking-widest font-medium">
+            <a href="index.html" class="hover:text-red-500 transition-colors">Home</a>
+            <a href="gallery.html" class="hover:text-red-500 transition-colors">Gallery</a>
+            <a href="services.html" class="hover:text-red-500 transition-colors">Services</a>
+            <a href="about.html" class="hover:text-red-500 transition-colors">About</a>
+            <a href="contact.html" class="hover:text-red-500 transition-colors">Contact</a>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button id="mobile-menu-btn" class="md:hidden text-3xl">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Book Button (Desktop) -->
+        <a href="contact.html" class="hidden md:block px-6 py-3 bg-gradient-to-r from-red-600 to-blue-600 rounded-full font-medium hover:brightness-110 transition-all">
+            Book a Shoot
+        </a>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-zinc-950 border-t border-zinc-800 py-6">
+        <div class="flex flex-col px-6 space-y-6 text-lg">
+            <a href="index.html" class="hover:text-red-500">Home</a>
+            <a href="gallery.html" class="hover:text-red-500">Gallery</a>
+            <a href="services.html" class="hover:text-red-500">Services</a>
+            <a href="about.html" class="hover:text-red-500">About</a>
+            <a href="contact.html" class="hover:text-red-500">Contact</a>
+            <a href="contact.html" class="block w-full text-center py-4 bg-gradient-to-r from-red-600 to-blue-600 rounded-2xl font-medium">
                 Book a Shoot
             </a>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <!-- Hero -->
     <section class="min-h-screen flex items-center relative overflow-hidden">
