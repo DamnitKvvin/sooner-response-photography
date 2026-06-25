@@ -1,10 +1,10 @@
 // script.js - Sooner Response Photography
 
 const media = [
-    { type: "image", src: "https://ibb.co/0RsLwh2x", thumb: "https://ibb.co/0RsLwh2x", caption: "20' FPIU - Hartshorne Police" },
-    { type: "image", src: "https://ibb.co/JWQK5Rnn", thumb: "https://ibb.co/JWQK5Rnn", caption: "20' FPIU - Hartshorne Police" },
-    { type: "image", src: "https://ibb.co/VYy4TRtZ", thumb: "https://ibb.co/VYy4TRtZ", caption: "20' FPIU - Hartshorne Police" },
-    { type: "image", src: "https://ibb.co/Mkb4W5zz", thumb: "https://ibb.co/Mkb4W5zz", caption: "20' FPIU - Hartshorne Police" }
+    { type: "image", src: "https://i.ibb.co/G4HDhcpq/DSC-0479.jpg", thumb: "https://i.ibb.co/G4HDhcpq/DSC-0479.jpg", caption: "20' FPIU - Hartshorne Police" },
+    { type: "image", src: "https://i.ibb.co/Xf8bSZXX/DSC-0455.jpg", thumb: "https://i.ibb.co/Xf8bSZXX/DSC-0455.jpg", caption: "20' FPIU - Hartshorne Police" },
+    { type: "image", src: "https://i.ibb.co/HTv8q6Vs/DSC-0417.jpg", thumb: "https://i.ibb.co/HTv8q6Vs/DSC-0417.jpg", caption: "20' FPIU - Hartshorne Police" },
+    { type: "image", src: "https://i.ibb.co/hFkjh1GG/DSC-0370.jpg", thumb: "https://i.ibb.co/hFkjh1GG/DSC-0370.jpg", caption: "20' FPIU - Hartshorne Police" }
 ];
 
 function renderMedia() {
