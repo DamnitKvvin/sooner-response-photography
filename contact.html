@@ -14,7 +14,7 @@
     </style>
 </head>
 <body class="bg-zinc-950 text-white">
-    <!-- Navbar (same as before) -->
+    <!-- Navbar -->
     <nav class="fixed top-0 w-full bg-zinc-950/95 backdrop-blur-md z-50 border-b border-zinc-800">
         <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
             <div class="flex items-center space-x-3">
@@ -43,7 +43,8 @@
                 <p class="text-zinc-400 mt-4">Ready to document your agency's important moments?</p>
             </div>
 
-            <form id="contact-form" class="space-y-6 bg-zinc-900 p-10 rounded-3xl">
+            <!-- Formspree Integrated Here -->
+            <form id="contact-form" action="https://formspree.io/f/xzdleppv" method="POST" class="space-y-6 bg-zinc-900 p-10 rounded-3xl">
                 <div>
                     <label class="block text-sm uppercase tracking-widest mb-2">Your Name</label>
                     <input type="text" name="name" required class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-6 py-4 focus:outline-none focus:border-red-500">
@@ -60,7 +61,7 @@
                     <label class="block text-sm uppercase tracking-widest mb-2">Message / Project Details</label>
                     <textarea name="message" rows="6" required class="w-full bg-zinc-800 border border-zinc-700 rounded-3xl px-6 py-4 focus:outline-none focus:border-red-500"></textarea>
                 </div>
-                <button type="submit" id="submit-btn" 
+                <button type="submit" 
                         class="w-full py-5 bg-gradient-to-r from-red-600 to-blue-600 rounded-2xl font-semibold text-lg hover:brightness-110 transition-all">
                     Send Message
                 </button>
