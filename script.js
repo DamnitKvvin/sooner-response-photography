@@ -112,4 +112,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Contact form
     initContactForm();
+
+    // ====================== MOBILE MENU ======================
+const mobileBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+if (mobileBtn && mobileMenu) {
+    mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        
+        // Toggle icon between bars and X
+        const icon = mobileBtn.querySelector('i');
+        if (icon.classList.contains('fa-bars')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
+}
+
+// ====================== BACK TO TOP ======================
+const backToTopBtn = document.createElement('button');
+backToTopBtn.id = 'back-to-top';
+backToTopBtn.className = 'hidden fixed bottom-8 right-8 bg-gradient-to-r from-red-600 to-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-xl hover:brightness-110 transition-all z-50';
+backToTopBtn.innerHTML = '<i class="fas fa-arrow-up text-xl"></i>';
+document.body.appendChild(backToTopBtn);
+
+backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) {
+        backToTopBtn.classList.remove('hidden');
+    } else {
+        backToTopBtn.classList.add('hidden');
+    }
+});
+    
 });
