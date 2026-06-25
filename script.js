@@ -4,8 +4,21 @@ const media = [
     { type: "image", src: "https://i.ibb.co/G4HDhcpq/DSC-0479.jpg", thumb: "https://i.ibb.co/G4HDhcpq/DSC-0479.jpg", caption: "20' FPIU - Hartshorne Police" },
     { type: "image", src: "https://i.ibb.co/Xf8bSZXX/DSC-0455.jpg", thumb: "https://i.ibb.co/Xf8bSZXX/DSC-0455.jpg", caption: "20' FPIU - Hartshorne Police" },
     { type: "image", src: "https://i.ibb.co/HTv8q6Vs/DSC-0417.jpg", thumb: "https://i.ibb.co/HTv8q6Vs/DSC-0417.jpg", caption: "20' FPIU - Hartshorne Police" },
-    { type: "image", src: "https://i.ibb.co/hFkjh1GG/DSC-0370.jpg", thumb: "https://i.ibb.co/hFkjh1GG/DSC-0370.jpg", caption: "20' FPIU - Hartshorne Police" }
-    // Add the rest of your images here (just copy the same pattern)
+    { type: "image", src: "https://i.ibb.co/hFkjh1GG/DSC-0370.jpg", thumb: "https://i.ibb.co/hFkjh1GG/DSC-0370.jpg", caption: "20' FPIU - Hartshorne Police" },
+
+    { type: "image", src: "https://i.ibb.co/V09SBPs9/DSC-0134.jpg", thumb: "https://i.ibb.co/V09SBPs9/DSC-0134.jpg", caption: "Command 1 - Hartshorne Fire Rescue" },
+    { type: "image", src: "https://i.ibb.co/GfdqGZFC/DSC-0370-1.jpg", thumb: "https://i.ibb.co/GfdqGZFC/DSC-0370-1.jpg", caption: "Tanker 13 - Hartshorne Fire Rescue" },
+    { type: "image", src: "https://i.ibb.co/nNHx9DTh/DSC-0046.jpg", thumb: "https://i.ibb.co/nNHx9DTh/DSC-0046.jpg", caption: "Engine 1 - Haileyville Vol. Fire" },
+    { type: "image", src: "https://i.ibb.co/23pJPvdf/DSC-0048.jpg", thumb: "https://i.ibb.co/23pJPvdf/DSC-0048.jpg", caption: "Engine 1 - Haileyville Vol. Fire" },
+    { type: "image", src: "https://i.ibb.co/fdnSqWXV/DSC-0060.jpg", thumb: "https://i.ibb.co/fdnSqWXV/DSC-0060.jpg", caption: "Tanker 7 - Haileyville Vol. Fire" },
+    { type: "image", src: "https://i.ibb.co/4khW1Z8/DSC-0124.jpg", thumb: "https://i.ibb.co/4khW1Z8/DSC-0124.jpg", caption: "Tanker 7 - Haileyville Vol. Fire" },
+    { type: "image", src: "https://i.ibb.co/PZdS0dGF/DSC-0091.jpg", thumb: "https://i.ibb.co/PZdS0dGF/DSC-0091.jpg", caption: "F350 - Haileyville Vol. Fire" },
+    { type: "image", src: "https://i.ibb.co/hF78tkpm/DSC-0134-1.jpg", thumb: "https://i.ibb.co/hF78tkpm/DSC-0134-1.jpg", caption: "3500 - Haileyville Vol. Fire" },
+
+    { type: "image", src: "https://i.ibb.co/RGwsbY3C/DSC-0158.jpg", thumb: "https://i.ibb.co/RGwsbY3C/DSC-0158.jpg", caption: "Ladder 1 - McAlester Fire" },
+    { type: "image", src: "https://i.ibb.co/Q3gW2xRb/DSC-0160.jpg", thumb: "https://i.ibb.co/Q3gW2xRb/DSC-0160.jpg", caption: "Ladder 1 - McAlester Fire" },
+    { type: "image", src: "https://i.ibb.co/1GQHSXXd/DSC-0198.jpg", thumb: "https://i.ibb.co/1GQHSXXd/DSC-0198.jpg", caption: "Medic 2 - McAlester Fire" },
+    { type: "image", src: "https://i.ibb.co/TMCNJqJb/DSC-0186.jpg", thumb: "https://i.ibb.co/TMCNJqJb/DSC-0186.jpg", caption: "Medic 2 - McAlester Fire" },
 ];
 
 function renderMedia() {
