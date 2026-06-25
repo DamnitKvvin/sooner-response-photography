@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gallery of Oklahoma first responder photography by Sooner Response Photography. Fire, EMS, Law Enforcement, and emergency scenes across Oklahoma.">
+    <meta name="keywords" content="Oklahoma fire photography, EMS photography, first responder photos, public safety photography, Hartshorne Fire, McAlester Fire">
+    <meta name="author" content="Sooner Response Photography">
+    
     <title>Gallery - Sooner Response Photography</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -11,12 +19,11 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
         body { font-family: 'Inter', system_ui, sans-serif; }
         h1, h2, h3 { font-family: 'Playfair Display', sans-serif; }
-        .masonry-img { transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1); }
-        .masonry-img:hover { transform: scale(1.03); filter: brightness(1.08); }
     </style>
 </head>
 <body class="bg-zinc-950 text-white">
     <!-- Navbar -->
+    <!-- (Your existing navbar stays the same) -->
     <nav class="fixed top-0 w-full bg-zinc-950/95 backdrop-blur-md z-50 border-b border-zinc-800">
         <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
             <div class="flex items-center space-x-3">
@@ -60,6 +67,40 @@
             <div id="lightbox-caption" class="text-center mt-6 text-zinc-300 text-lg"></div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-900 border-t border-zinc-800 py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-br from-red-600 to-blue-600 rounded-2xl flex items-center justify-center">
+                            <i class="fas fa-camera text-white"></i>
+                        </div>
+                        <span class="text-xl font-bold tracking-tighter">Sooner Response</span>
+                    </div>
+                    <p class="text-zinc-400 text-sm">Capturing Heroes Across Oklahoma</p>
+                </div>
+                
+                <div class="flex gap-8 text-sm">
+                    <a href="index.html" class="hover:text-red-500">Home</a>
+                    <a href="gallery.html" class="hover:text-red-500">Gallery</a>
+                    <a href="services.html" class="hover:text-red-500">Services</a>
+                    <a href="about.html" class="hover:text-red-500">About</a>
+                    <a href="contact.html" class="hover:text-red-500">Contact</a>
+                </div>
+
+                <div class="text-center md:text-right">
+                    <div class="flex justify-center md:justify-end gap-6 text-2xl mb-4">
+                        <a href="https://www.facebook.com/profile.php?id=61590723851659" target="_blank" class="hover:text-red-500"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/soonerresponsepics" target="_blank" class="hover:text-red-500"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@soonerresponse" target="_blank" class="hover:text-red-500"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                    <p class="text-xs text-zinc-500">&copy; 2026 Sooner Response Photography. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
