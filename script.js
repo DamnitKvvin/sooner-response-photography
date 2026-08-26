@@ -1,24 +1,24 @@
 // Sooner Response Photography
 
 const media = [
-  { type: "image", src: "https://i.ibb.co/G4HDhcpq/DSC-0479.jpg", thumb: "https://i.ibb.co/G4HDhcpq/DSC-0479.jpg", caption: "20' FPIU - Hartshorne Police" },
-  { type: "image", src: "https://i.ibb.co/Xf8bSZXX/DSC-0455.jpg", thumb: "https://i.ibb.co/Xf8bSZXX/DSC-0455.jpg", caption: "20' FPIU - Hartshorne Police" },
-  { type: "image", src: "https://i.ibb.co/HTv8q6Vs/DSC-0417.jpg", thumb: "https://i.ibb.co/HTv8q6Vs/DSC-0417.jpg", caption: "20' FPIU - Hartshorne Police" },
-  { type: "image", src: "https://i.ibb.co/hFkjh1GG/DSC-0370.jpg", thumb: "https://i.ibb.co/hFkjh1GG/DSC-0370.jpg", caption: "20' FPIU - Hartshorne Police" },
+  { type: "image", src: "https://i.ibb.co/G4HDhcpq/DSC-0479.jpg", thumb: "https://i.ibb.co/G4HDhcpq/DSC-0479.jpg", caption: "2020 Ford Police Interceptor Utility — Hartshorne Police Department" },
+  { type: "image", src: "https://i.ibb.co/Xf8bSZXX/DSC-0455.jpg", thumb: "https://i.ibb.co/Xf8bSZXX/DSC-0455.jpg", caption: "2020 Ford Police Interceptor Utility — Hartshorne Police Department" },
+  { type: "image", src: "https://i.ibb.co/HTv8q6Vs/DSC-0417.jpg", thumb: "https://i.ibb.co/HTv8q6Vs/DSC-0417.jpg", caption: "2020 Ford Police Interceptor Utility — Hartshorne Police Department" },
+  { type: "image", src: "https://i.ibb.co/hFkjh1GG/DSC-0370.jpg", thumb: "https://i.ibb.co/hFkjh1GG/DSC-0370.jpg", caption: "2020 Ford Police Interceptor Utility — Hartshorne Police Department" },
 
-  { type: "image", src: "https://i.ibb.co/V09SBPs9/DSC-0134.jpg", thumb: "https://i.ibb.co/V09SBPs9/DSC-0134.jpg", caption: "Command 1 - Hartshorne Fire Rescue" },
-  { type: "image", src: "https://i.ibb.co/GfdqGZFC/DSC-0370-1.jpg", thumb: "https://i.ibb.co/GfdqGZFC/DSC-0370-1.jpg", caption: "Tanker 13 - Hartshorne Fire Rescue" },
-  { type: "image", src: "https://i.ibb.co/nNHx9DTh/DSC-0046.jpg", thumb: "https://i.ibb.co/nNHx9DTh/DSC-0046.jpg", caption: "Engine 1 - Haileyville Vol. Fire" },
-  { type: "image", src: "https://i.ibb.co/23pJPvdf/DSC-0048.jpg", thumb: "https://i.ibb.co/23pJPvdf/DSC-0048.jpg", caption: "Engine 1 - Haileyville Vol. Fire" },
-  { type: "image", src: "https://i.ibb.co/fdnSqWXV/DSC-0060.jpg", thumb: "https://i.ibb.co/fdnSqWXV/DSC-0060.jpg", caption: "Tanker 7 - Haileyville Vol. Fire" },
-  { type: "image", src: "https://i.ibb.co/4khW1Z8/DSC-0124.jpg", thumb: "https://i.ibb.co/4khW1Z8/DSC-0124.jpg", caption: "Tanker 7 - Haileyville Vol. Fire" },
-  { type: "image", src: "https://i.ibb.co/PZdS0dGF/DSC-0091.jpg", thumb: "https://i.ibb.co/PZdS0dGF/DSC-0091.jpg", caption: "F350 - Haileyville Vol. Fire" },
-  { type: "image", src: "https://i.ibb.co/hF78tkpm/DSC-0134-1.jpg", thumb: "https://i.ibb.co/hF78tkpm/DSC-0134-1.jpg", caption: "3500 - Haileyville Vol. Fire" },
+  { type: "image", src: "https://i.ibb.co/V09SBPs9/DSC-0134.jpg", thumb: "https://i.ibb.co/V09SBPs9/DSC-0134.jpg", caption: "Command 1 — Hartshorne Fire Rescue" },
+  { type: "image", src: "https://i.ibb.co/GfdqGZFC/DSC-0370-1.jpg", thumb: "https://i.ibb.co/GfdqGZFC/DSC-0370-1.jpg", caption: "Tanker 13 — Hartshorne Fire Rescue" },
+  { type: "image", src: "https://i.ibb.co/nNHx9DTh/DSC-0046.jpg", thumb: "https://i.ibb.co/nNHx9DTh/DSC-0046.jpg", caption: "Engine 1 — Haileyville Volunteer Fire Department" },
+  { type: "image", src: "https://i.ibb.co/23pJPvdf/DSC-0048.jpg", thumb: "https://i.ibb.co/23pJPvdf/DSC-0048.jpg", caption: "Engine 1 — Haileyville Volunteer Fire Department" },
+  { type: "image", src: "https://i.ibb.co/fdnSqWXV/DSC-0060.jpg", thumb: "https://i.ibb.co/fdnSqWXV/DSC-0060.jpg", caption: "Tanker 7 — Haileyville Volunteer Fire Department" },
+  { type: "image", src: "https://i.ibb.co/4khW1Z8/DSC-0124.jpg", thumb: "https://i.ibb.co/4khW1Z8/DSC-0124.jpg", caption: "Tanker 7 — Haileyville Volunteer Fire Department" },
+  { type: "image", src: "https://i.ibb.co/PZdS0dGF/DSC-0091.jpg", thumb: "https://i.ibb.co/PZdS0dGF/DSC-0091.jpg", caption: "F-350 — Haileyville Volunteer Fire Department" },
+  { type: "image", src: "https://i.ibb.co/hF78tkpm/DSC-0134-1.jpg", thumb: "https://i.ibb.co/hF78tkpm/DSC-0134-1.jpg", caption: "3500 — Haileyville Volunteer Fire Department" },
 
-  { type: "image", src: "https://i.ibb.co/RGwsbY3C/DSC-0158.jpg", thumb: "https://i.ibb.co/RGwsbY3C/DSC-0158.jpg", caption: "Ladder 1 - McAlester Fire" },
-  { type: "image", src: "https://i.ibb.co/Q3gW2xRb/DSC-0160.jpg", thumb: "https://i.ibb.co/Q3gW2xRb/DSC-0160.jpg", caption: "Ladder 1 - McAlester Fire" },
-  { type: "image", src: "https://i.ibb.co/1GQHSXXd/DSC-0198.jpg", thumb: "https://i.ibb.co/1GQHSXXd/DSC-0198.jpg", caption: "Medic 2 - McAlester Fire" },
-  { type: "image", src: "https://i.ibb.co/TMCNJqJb/DSC-0186.jpg", thumb: "https://i.ibb.co/TMCNJqJb/DSC-0186.jpg", caption: "Medic 2 - McAlester Fire" }
+  { type: "image", src: "https://i.ibb.co/RGwsbY3C/DSC-0158.jpg", thumb: "https://i.ibb.co/RGwsbY3C/DSC-0158.jpg", caption: "Ladder 1 — McAlester Fire Department" },
+  { type: "image", src: "https://i.ibb.co/Q3gW2xRb/DSC-0160.jpg", thumb: "https://i.ibb.co/Q3gW2xRb/DSC-0160.jpg", caption: "Ladder 1 — McAlester Fire Department" },
+  { type: "image", src: "https://i.ibb.co/1GQHSXXd/DSC-0198.jpg", thumb: "https://i.ibb.co/1GQHSXXd/DSC-0198.jpg", caption: "Medic 2 — McAlester Fire Department" },
+  { type: "image", src: "https://i.ibb.co/TMCNJqJb/DSC-0186.jpg", thumb: "https://i.ibb.co/TMCNJqJb/DSC-0186.jpg", caption: "Medic 2 — McAlester Fire Department" }
 ];
 
 function renderGallery() {
@@ -30,6 +30,7 @@ function renderGallery() {
   media.forEach((item) => {
     const div = document.createElement('div');
     div.className = 'masonry-item group cursor-pointer';
+
     div.innerHTML = `
       <div class="relative overflow-hidden bg-[var(--bg-card)]">
         <img 
@@ -45,6 +46,7 @@ function renderGallery() {
         </div>
       </div>
     `;
+
     div.addEventListener('click', () => openLightbox(item));
     grid.appendChild(div);
   });
@@ -54,12 +56,20 @@ function openLightbox(item) {
   const lightbox = document.getElementById('lightbox');
   const content = document.getElementById('lightbox-content');
   const caption = document.getElementById('lightbox-caption');
+
   if (!lightbox || !content) return;
 
   content.innerHTML = `
-    <img src="${item.src}" alt="${item.caption}" class="max-h-[85vh] max-w-full object-contain">
+    <img 
+      src="${item.src}" 
+      alt="${item.caption}" 
+      class="max-h-[85vh] max-w-full object-contain"
+    >
   `;
-  if (caption) caption.textContent = item.caption;
+
+  if (caption) {
+    caption.textContent = item.caption;
+  }
 
   lightbox.classList.add('active');
   document.body.style.overflow = 'hidden';
@@ -68,6 +78,7 @@ function openLightbox(item) {
 function closeLightbox() {
   const lightbox = document.getElementById('lightbox');
   if (!lightbox) return;
+
   lightbox.classList.remove('active');
   document.body.style.overflow = '';
 }
@@ -75,11 +86,14 @@ function closeLightbox() {
 function initMobileMenu() {
   const btn = document.getElementById('mobile-menu-btn');
   const menu = document.getElementById('mobile-menu');
+
   if (!btn || !menu) return;
 
   btn.addEventListener('click', () => {
     menu.classList.toggle('open');
+
     const icon = btn.querySelector('i');
+
     if (icon) {
       icon.classList.toggle('fa-bars');
       icon.classList.toggle('fa-times');
@@ -89,7 +103,9 @@ function initMobileMenu() {
   menu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       menu.classList.remove('open');
+
       const icon = btn.querySelector('i');
+
       if (icon) {
         icon.classList.remove('fa-times');
         icon.classList.add('fa-bars');
@@ -100,6 +116,7 @@ function initMobileMenu() {
 
 function initBackToTop() {
   const btn = document.getElementById('back-to-top');
+
   if (!btn) return;
 
   window.addEventListener('scroll', () => {
@@ -111,16 +128,21 @@ function initBackToTop() {
   });
 
   btn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   });
 }
 
 function initContactForm() {
   const form = document.getElementById('contact-form');
+
   if (!form) return;
 
   form.addEventListener('submit', function () {
     const btn = form.querySelector('button[type="submit"]');
+
     if (btn) {
       btn.textContent = 'Sending...';
       btn.disabled = true;
@@ -135,13 +157,18 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
 
   const lightbox = document.getElementById('lightbox');
+
   if (lightbox) {
     lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) closeLightbox();
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
     });
   }
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'Escape') {
+      closeLightbox();
+    }
   });
 });
