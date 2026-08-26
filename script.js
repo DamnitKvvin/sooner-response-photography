@@ -1,9 +1,6 @@
-// Sooner Response Photography - Main Script
+// Sooner Response Photography
 
 const media = [
-  // Replace these with your real direct image links from ImgBB
-  // Format: { type: "image", src: "https://i.ibb.co/xxxxx/filename.jpg", thumb: "https://i.ibb.co/xxxxx/filename.jpg", caption: "Description" },
-  
   { type: "image", src: "https://i.ibb.co/G4HDhcpq/DSC-0479.jpg", thumb: "https://i.ibb.co/G4HDhcpq/DSC-0479.jpg", caption: "20' FPIU - Hartshorne Police" },
   { type: "image", src: "https://i.ibb.co/Xf8bSZXX/DSC-0455.jpg", thumb: "https://i.ibb.co/Xf8bSZXX/DSC-0455.jpg", caption: "20' FPIU - Hartshorne Police" },
   { type: "image", src: "https://i.ibb.co/HTv8q6Vs/DSC-0417.jpg", thumb: "https://i.ibb.co/HTv8q6Vs/DSC-0417.jpg", caption: "20' FPIU - Hartshorne Police" },
@@ -24,7 +21,6 @@ const media = [
   { type: "image", src: "https://i.ibb.co/TMCNJqJb/DSC-0186.jpg", thumb: "https://i.ibb.co/TMCNJqJb/DSC-0186.jpg", caption: "Medic 2 - McAlester Fire" }
 ];
 
-// ========== GALLERY ==========
 function renderGallery() {
   const grid = document.getElementById('masonry-grid');
   if (!grid) return;
@@ -35,17 +31,17 @@ function renderGallery() {
     const div = document.createElement('div');
     div.className = 'masonry-item group cursor-pointer';
     div.innerHTML = `
-      <div class="relative overflow-hidden rounded-2xl bg-zinc-900 shadow-lg">
+      <div class="relative overflow-hidden bg-[var(--bg-card)]">
         <img 
           src="${item.thumb}" 
           alt="${item.caption}" 
           loading="lazy"
           decoding="async"
-          class="masonry-img w-full h-auto object-cover"
+          class="masonry-img"
         >
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-        <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-          <p class="text-sm text-white font-medium line-clamp-2">${item.caption}</p>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div class="gallery-caption absolute bottom-0 left-0 right-0 p-4">
+          <p class="text-sm text-white/90 font-medium line-clamp-2">${item.caption}</p>
         </div>
       </div>
     `;
@@ -54,22 +50,15 @@ function renderGallery() {
   });
 }
 
-// ========== LIGHTBOX ==========
 function openLightbox(item) {
   const lightbox = document.getElementById('lightbox');
   const content = document.getElementById('lightbox-content');
   const caption = document.getElementById('lightbox-caption');
-
   if (!lightbox || !content) return;
 
   content.innerHTML = `
-    <img 
-      src="${item.src}" 
-      alt="${item.caption}" 
-      class="max-h-[85vh] max-w-full rounded-xl shadow-2xl object-contain"
-    >
+    <img src="${item.src}" alt="${item.caption}" class="max-h-[85vh] max-w-full object-contain">
   `;
-  
   if (caption) caption.textContent = item.caption;
 
   lightbox.classList.add('active');
@@ -79,12 +68,10 @@ function openLightbox(item) {
 function closeLightbox() {
   const lightbox = document.getElementById('lightbox');
   if (!lightbox) return;
-
   lightbox.classList.remove('active');
   document.body.style.overflow = '';
 }
 
-// ========== MOBILE MENU ==========
 function initMobileMenu() {
   const btn = document.getElementById('mobile-menu-btn');
   const menu = document.getElementById('mobile-menu');
@@ -99,7 +86,6 @@ function initMobileMenu() {
     }
   });
 
-  // Close menu when a link is clicked
   menu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       menu.classList.remove('open');
@@ -112,7 +98,6 @@ function initMobileMenu() {
   });
 }
 
-// ========== BACK TO TOP ==========
 function initBackToTop() {
   const btn = document.getElementById('back-to-top');
   if (!btn) return;
@@ -130,7 +115,6 @@ function initBackToTop() {
   });
 }
 
-// ========== CONTACT FORM ==========
 function initContactForm() {
   const form = document.getElementById('contact-form');
   if (!form) return;
@@ -141,18 +125,15 @@ function initContactForm() {
       btn.textContent = 'Sending...';
       btn.disabled = true;
     }
-    // Formspree handles the actual submit
   });
 }
 
-// ========== INIT ==========
 document.addEventListener('DOMContentLoaded', () => {
   renderGallery();
   initMobileMenu();
   initBackToTop();
   initContactForm();
 
-  // Lightbox close handlers
   const lightbox = document.getElementById('lightbox');
   if (lightbox) {
     lightbox.addEventListener('click', (e) => {
