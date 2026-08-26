@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="About Sooner Response Photography — Oklahoma-based public safety photographer dedicated to capturing first responders in action.">
-  <meta name="keywords" content="Sooner Response Photography, Oklahoma photographer, first responder photographer, public safety media">
   <meta name="author" content="Sooner Response Photography">
   
   <title>About | Sooner Response Photography</title>
@@ -21,58 +20,54 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-zinc-950 text-white antialiased">
+<body>
 
-  <!-- Navbar -->
-  <nav class="fixed top-0 w-full bg-zinc-950/95 backdrop-blur-md z-50 border-b border-zinc-800">
-    <div class="max-w-7xl mx-auto px-5 sm:px-6 py-4 flex justify-between items-center">
+  <nav class="nav fixed top-0 w-full z-50">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
-        <div class="w-9 h-9 bg-gradient-to-br from-red-600 to-blue-600 rounded-xl flex items-center justify-center">
-          <i class="fas fa-camera text-white text-sm"></i>
+        <div class="w-8 h-8 bg-[var(--accent)] flex items-center justify-center">
+          <i class="fas fa-camera text-white text-xs"></i>
         </div>
-        <span class="text-xl font-bold tracking-tight">Sooner Response</span>
+        <span class="text-[15px] font-semibold tracking-tight">Sooner Response</span>
       </a>
 
-      <div class="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest font-medium">
-        <a href="index.html" class="nav-link hover:text-red-500">Home</a>
-        <a href="gallery.html" class="nav-link hover:text-red-500">Gallery</a>
-        <a href="services.html" class="nav-link hover:text-red-500">Services</a>
-        <a href="about.html" class="nav-link text-red-500">About</a>
-        <a href="contact.html" class="nav-link hover:text-red-500">Contact</a>
+      <div class="hidden md:flex items-center gap-9">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </div>
 
-      <a href="contact.html" class="hidden md:inline-flex px-5 py-2.5 btn-primary rounded-full text-sm font-semibold">
-        Book a Shoot
-      </a>
+      <a href="contact.html" class="hidden md:inline-flex btn btn-primary text-[13px] py-2.5 px-5">Book a Shoot</a>
 
-      <button id="mobile-menu-btn" class="md:hidden text-2xl p-2" aria-label="Toggle menu">
+      <button id="mobile-menu-btn" class="md:hidden text-xl text-[var(--text-muted)] p-1" aria-label="Menu">
         <i class="fas fa-bars"></i>
       </button>
     </div>
 
-    <div id="mobile-menu" class="md:hidden bg-zinc-950 border-t border-zinc-800">
-      <div class="flex flex-col px-6 py-6 gap-5 text-base">
-        <a href="index.html" class="hover:text-red-500">Home</a>
-        <a href="gallery.html" class="hover:text-red-500">Gallery</a>
-        <a href="services.html" class="hover:text-red-500">Services</a>
-        <a href="about.html" class="hover:text-red-500">About</a>
-        <a href="contact.html" class="hover:text-red-500">Contact</a>
-        <a href="contact.html" class="mt-2 block text-center py-3.5 btn-primary rounded-full font-semibold">Book a Shoot</a>
+    <div id="mobile-menu" class="md:hidden border-t border-[var(--border-subtle)] bg-[var(--bg)]">
+      <div class="flex flex-col px-6 py-6 gap-5">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="contact.html" class="btn btn-primary mt-2 justify-center">Book a Shoot</a>
       </div>
     </div>
   </nav>
 
-  <!-- About Content -->
   <section class="pt-28 pb-24">
-    <div class="max-w-3xl mx-auto px-5 sm:px-6">
-      <div class="text-center mb-14">
-        <span class="text-red-500 text-sm tracking-widest uppercase">Our Story</span>
-        <h1 class="text-4xl sm:text-5xl font-bold tracking-tighter mt-3">Capturing Oklahoma's Heroes</h1>
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="mb-14">
+        <p class="section-label mb-3">About</p>
+        <h1 class="text-4xl sm:text-5xl font-semibold tracking-tight">Capturing Oklahoma's Heroes</h1>
       </div>
 
-      <div class="space-y-8 text-lg leading-relaxed text-zinc-300">
+      <div class="space-y-6 text-[var(--text-muted)] leading-relaxed text-[1.05rem]">
         <p>
           Sooner Response Photography is dedicated to documenting the courage, professionalism, and daily service of Oklahoma's first responders.
         </p>
@@ -84,78 +79,74 @@
         </p>
       </div>
 
-      <!-- Values -->
-      <div class="grid sm:grid-cols-2 gap-6 mt-16">
-        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
-          <div class="w-10 h-10 bg-red-600/15 rounded-xl flex items-center justify-center text-red-500 mb-4">
+      <div class="grid sm:grid-cols-2 gap-5 mt-14">
+        <div class="card p-6">
+          <div class="service-icon bg-[rgba(196,30,30,0.12)] text-[var(--accent)] mb-4">
             <i class="fas fa-shield-halved"></i>
           </div>
-          <h3 class="font-semibold text-lg mb-2">Respect First</h3>
-          <p class="text-zinc-400 text-sm">Every frame is shot with respect for the difficult work these heroes do every day.</p>
+          <h3 class="font-semibold mb-2">Respect First</h3>
+          <p class="text-sm text-[var(--text-muted)]">Every frame is shot with respect for the difficult work these heroes do every day.</p>
         </div>
-        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
-          <div class="w-10 h-10 bg-blue-600/15 rounded-xl flex items-center justify-center text-blue-500 mb-4">
+        <div class="card p-6">
+          <div class="service-icon bg-[rgba(29,78,216,0.12)] text-[var(--accent-blue)] mb-4">
             <i class="fas fa-camera"></i>
           </div>
-          <h3 class="font-semibold text-lg mb-2">Authentic Storytelling</h3>
-          <p class="text-zinc-400 text-sm">Real moments, real service — captured without staging or interference.</p>
+          <h3 class="font-semibold mb-2">Authentic Storytelling</h3>
+          <p class="text-sm text-[var(--text-muted)]">Real moments, real service — captured without staging or interference.</p>
         </div>
       </div>
 
       <!-- Testimonial -->
-      <div class="mt-20">
-        <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 sm:p-10">
-          <div class="flex items-center gap-4 mb-6">
-            <div class="w-12 h-12 bg-blue-600/20 rounded-2xl flex items-center justify-center text-2xl">🛟</div>
-            <div>
-              <p class="font-semibold">Haileyville Volunteer Fire Department</p>
-            </div>
+      <div class="mt-16 card p-8 sm:p-10">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-11 h-11 bg-[rgba(29,78,216,0.15)] flex items-center justify-center text-xl rounded">
+            🛟
           </div>
-          <p class="text-zinc-300 italic leading-relaxed">
-            "Working with Sooner Response has been a game changer for our small volunteer department. The photos highlight our training and community involvement in a way that really resonates. Highly recommend for any Oklahoma fire or EMS agency."
-          </p>
-          <p class="mt-6 text-red-500 text-sm font-medium">— Haileyville Volunteer Fire Department</p>
+          <div>
+            <p class="font-semibold text-[15px]">Haileyville Volunteer Fire Department</p>
+          </div>
         </div>
+        <p class="text-[var(--text-muted)] italic leading-relaxed">
+          "Working with Sooner Response has been a game changer for our small volunteer department. The photos highlight our training and community involvement in a way that really resonates. Highly recommend for any Oklahoma fire or EMS agency."
+        </p>
+        <p class="mt-6 text-[var(--accent)] text-sm font-medium">— Haileyville Volunteer Fire Department</p>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-zinc-950 border-t border-zinc-800 py-14">
-    <div class="max-w-7xl mx-auto px-5 sm:px-6">
-      <div class="flex flex-col md:flex-row justify-between items-center gap-10">
-        <div class="text-center md:text-left">
-          <div class="flex items-center justify-center md:justify-start gap-3 mb-3">
-            <div class="w-8 h-8 bg-gradient-to-br from-red-600 to-blue-600 rounded-xl flex items-center justify-center">
-              <i class="fas fa-camera text-white text-xs"></i>
+  <footer class="border-t border-[var(--border-subtle)] py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-10">
+        <div>
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-7 h-7 bg-[var(--accent)] flex items-center justify-center">
+              <i class="fas fa-camera text-white text-[10px]"></i>
             </div>
-            <span class="text-lg font-bold tracking-tight">Sooner Response</span>
+            <span class="text-sm font-semibold tracking-tight">Sooner Response</span>
           </div>
-          <p class="text-zinc-500 text-sm">Capturing Heroes Across Oklahoma</p>
+          <p class="text-xs text-[var(--text-faint)]">Capturing Heroes Across Oklahoma</p>
         </div>
-
-        <div class="flex flex-wrap justify-center gap-6 text-sm text-zinc-400">
-          <a href="index.html">Home</a>
-          <a href="gallery.html">Gallery</a>
-          <a href="services.html">Services</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
+        <div class="flex flex-wrap gap-x-8 gap-y-3">
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="gallery.html" class="footer-link">Gallery</a>
+          <a href="services.html" class="footer-link">Services</a>
+          <a href="about.html" class="footer-link">About</a>
+          <a href="contact.html" class="footer-link">Contact</a>
         </div>
-
-        <div class="text-center md:text-right">
-          <div class="flex justify-center md:justify-end gap-5 text-xl mb-3">
-            <a href="https://www.facebook.com/profile.php?id=61590723851659" target="_blank" rel="noopener" class="hover:text-red-500"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/soonerresponsepics" target="_blank" rel="noopener" class="hover:text-red-500"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@soonerresponse" target="_blank" rel="noopener" class="hover:text-red-500"><i class="fab fa-tiktok"></i></a>
-          </div>
-          <p class="text-xs text-zinc-600">&copy; 2026 Sooner Response Photography</p>
+        <div class="flex items-center gap-5">
+          <a href="https://www.facebook.com/profile.php?id=61590723851659" target="_blank" rel="noopener" class="text-[var(--text-muted)] hover:text-white transition text-lg"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/soonerresponsepics" target="_blank" rel="noopener" class="text-[var(--text-muted)] hover:text-white transition text-lg"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@soonerresponse" target="_blank" rel="noopener" class="text-[var(--text-muted)] hover:text-white transition text-lg"><i class="fab fa-tiktok"></i></a>
         </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-[var(--border-subtle)] text-center">
+        <p class="text-xs text-[var(--text-faint)]">&copy; 2026 Sooner Response Photography. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
-  <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 btn-primary rounded-full flex items-center justify-center shadow-xl z-40" aria-label="Back to top">
-    <i class="fas fa-arrow-up"></i>
+  <button id="back-to-top" class="fixed bottom-8 right-8 w-11 h-11 rounded flex items-center justify-center z-40" aria-label="Back to top">
+    <i class="fas fa-arrow-up text-sm"></i>
   </button>
 
   <script src="script.js"></script>
