@@ -12,9 +12,9 @@
   --text: #f4f4f5;
   --text-muted: #a1a1aa;
   --text-faint: #71717a;
-  --accent: #c41e1e;          /* deep emergency red */
-  --accent-hover: #e11d1d;
-  --accent-blue: #1d4ed8;
+  --accent: #2563eb;          /* emergency blue */
+  --accent-hover: #3b82f6;
+  --accent-red: #dc2626;
 }
 
 *,
@@ -250,7 +250,7 @@ h1, h2, h3, h4 {
 .form-input:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(196, 30, 30, 0.12);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
 .form-label {
