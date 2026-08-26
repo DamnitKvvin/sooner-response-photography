@@ -1,10 +1,26 @@
-/* Sooner Response Photography - Professional Styles */
+/* ============================================================
+   Sooner Response Photography
+   Refined professional / cinematic style
+   ============================================================ */
 
 :root {
-  --red: #dc2626;
-  --blue: #1e40af;
-  --red-light: #ef4444;
-  --blue-light: #3b82f6;
+  --bg: #0a0a0b;
+  --bg-elevated: #111113;
+  --bg-card: #161618;
+  --border: #27272a;
+  --border-subtle: #1f1f22;
+  --text: #f4f4f5;
+  --text-muted: #a1a1aa;
+  --text-faint: #71717a;
+  --accent: #c41e1e;          /* deep emergency red */
+  --accent-hover: #e11d1d;
+  --accent-blue: #1d4ed8;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 html {
@@ -12,53 +28,153 @@ html {
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  background-color: #09090b;
-  color: #fafafa;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
 }
 
-/* Navigation */
+/* ------------------------------------------------------------
+   Navigation
+   ------------------------------------------------------------ */
+.nav {
+  background: rgba(10, 10, 11, 0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
 .nav-link {
   position: relative;
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   transition: color 0.2s ease;
 }
 
-.nav-link::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -4px;
-  left: 0;
-  background: linear-gradient(to right, var(--red), var(--blue));
-  transition: width 0.3s ease;
+.nav-link:hover,
+.nav-link.active {
+  color: var(--text);
 }
 
-.nav-link:hover::after,
 .nav-link.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
   width: 100%;
+  height: 1px;
+  background: var(--accent);
 }
 
 /* Mobile menu */
 #mobile-menu {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.35s ease;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #mobile-menu.open {
-  max-height: 420px;
+  max-height: 480px;
 }
 
-/* Masonry Gallery */
+/* ------------------------------------------------------------
+   Buttons
+   ------------------------------------------------------------ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.875rem 1.75rem;
+  border-radius: 4px;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border);
+  padding: 0.875rem 1.75rem;
+  border-radius: 4px;
+}
+
+.btn-outline:hover {
+  border-color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-muted);
+  padding: 0.5rem 0;
+}
+
+.btn-ghost:hover {
+  color: var(--text);
+}
+
+/* ------------------------------------------------------------
+   Cards & Sections
+   ------------------------------------------------------------ */
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  transition: border-color 0.25s ease;
+}
+
+.card:hover {
+  border-color: var(--border);
+}
+
+.service-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-size: 1.125rem;
+}
+
+/* ------------------------------------------------------------
+   Gallery
+   ------------------------------------------------------------ */
 .masonry {
   column-count: 1;
-  column-gap: 1.25rem;
+  column-gap: 1.5rem;
 }
 
 @media (min-width: 640px) {
@@ -71,67 +187,105 @@ h1, h2, h3, h4 {
 
 .masonry-item {
   break-inside: avoid;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .masonry-img {
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), filter 0.3s ease;
   width: 100%;
   display: block;
+  transition: opacity 0.35s ease;
 }
 
 .masonry-item:hover .masonry-img {
-  transform: scale(1.03);
-  filter: brightness(1.08);
+  opacity: 0.88;
 }
 
-/* Lightbox */
+.gallery-caption {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.masonry-item:hover .gallery-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ------------------------------------------------------------
+   Lightbox
+   ------------------------------------------------------------ */
 .lightbox {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(0, 0, 0, 0.96);
   z-index: 100;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 2rem;
 }
 
 .lightbox.active {
   display: flex;
 }
 
-/* Buttons */
-.btn-primary {
-  background: linear-gradient(135deg, var(--red), var(--blue));
-  transition: filter 0.25s ease, transform 0.2s ease;
+/* ------------------------------------------------------------
+   Forms
+   ------------------------------------------------------------ */
+.form-input {
+  width: 100%;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.875rem 1.125rem;
+  color: var(--text);
+  font-size: 0.9375rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.btn-primary:hover {
-  filter: brightness(1.1);
-  transform: translateY(-1px);
+.form-input::placeholder {
+  color: var(--text-faint);
 }
 
-/* Cards */
-.service-card {
-  transition: border-color 0.3s ease, transform 0.25s ease;
+.form-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(196, 30, 30, 0.12);
 }
 
-.service-card:hover {
-  border-color: rgba(220, 38, 38, 0.4);
-  transform: translateY(-4px);
+.form-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
 }
 
-/* Footer */
-footer a:hover {
-  color: var(--red-light);
+/* ------------------------------------------------------------
+   Footer
+   ------------------------------------------------------------ */
+.footer-link {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
 }
 
-/* Back to top */
+.footer-link:hover {
+  color: var(--text);
+}
+
+/* ------------------------------------------------------------
+   Back to top
+   ------------------------------------------------------------ */
 #back-to-top {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.2s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
 }
 
 #back-to-top.visible {
@@ -140,20 +294,20 @@ footer a:hover {
 }
 
 #back-to-top:hover {
-  transform: translateY(-3px);
+  color: var(--text);
+  border-color: var(--text-muted);
 }
 
-/* Form inputs */
-input:focus, textarea:focus {
-  outline: none;
-  border-color: var(--red);
-  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
-}
-
-/* Utility */
+/* ------------------------------------------------------------
+   Utilities
+   ------------------------------------------------------------ */
 .line-clamp-2 {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.text-balance {
+  text-wrap: balance;
 }
