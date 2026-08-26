@@ -1,0 +1,159 @@
+/* Sooner Response Photography - Professional Styles */
+
+:root {
+  --red: #dc2626;
+  --blue: #1e40af;
+  --red-light: #ef4444;
+  --blue-light: #3b82f6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #09090b;
+  color: #fafafa;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Navigation */
+.nav-link {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: linear-gradient(to right, var(--red), var(--blue));
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Mobile menu */
+#mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+#mobile-menu.open {
+  max-height: 420px;
+}
+
+/* Masonry Gallery */
+.masonry {
+  column-count: 1;
+  column-gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .masonry { column-count: 2; }
+}
+
+@media (min-width: 1024px) {
+  .masonry { column-count: 3; }
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1.25rem;
+}
+
+.masonry-img {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), filter 0.3s ease;
+  width: 100%;
+  display: block;
+}
+
+.masonry-item:hover .masonry-img {
+  transform: scale(1.03);
+  filter: brightness(1.08);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, var(--red), var(--blue));
+  transition: filter 0.25s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+/* Cards */
+.service-card {
+  transition: border-color 0.3s ease, transform 0.25s ease;
+}
+
+.service-card:hover {
+  border-color: rgba(220, 38, 38, 0.4);
+  transform: translateY(-4px);
+}
+
+/* Footer */
+footer a:hover {
+  color: var(--red-light);
+}
+
+/* Back to top */
+#back-to-top {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.2s ease;
+}
+
+#back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+#back-to-top:hover {
+  transform: translateY(-3px);
+}
+
+/* Form inputs */
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--red);
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
+}
+
+/* Utility */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
