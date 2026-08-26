@@ -4,13 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Sooner Response Photography — Professional photography capturing Oklahoma's first responders, fire, EMS, and law enforcement in action.">
-  <meta name="keywords" content="Oklahoma first responder photography, fire photography, EMS photography, public safety photographer, Hartshorne, Haileyville, McAlester">
+  <meta name="keywords" content="Oklahoma first responder photography, fire photography, EMS photography, public safety photographer">
   <meta name="author" content="Sooner Response Photography">
   
   <title>Sooner Response Photography | Oklahoma First Responders</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-J0JM9MKS2T"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -19,7 +18,6 @@
     gtag('config', 'G-J0JM9MKS2T');
   </script>
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Sooner Response Photography | Oklahoma First Responders">
   <meta property="og:description" content="Capturing the bravery and service of Oklahoma's fire, EMS, and law enforcement heroes.">
   <meta property="og:type" content="website">
@@ -28,177 +26,187 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-zinc-950 text-white antialiased">
+<body>
 
   <!-- Navbar -->
-  <nav class="fixed top-0 w-full bg-zinc-950/95 backdrop-blur-md z-50 border-b border-zinc-800">
-    <div class="max-w-7xl mx-auto px-5 sm:px-6 py-4 flex justify-between items-center">
+  <nav class="nav fixed top-0 w-full z-50">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
-        <div class="w-9 h-9 bg-gradient-to-br from-red-600 to-blue-600 rounded-xl flex items-center justify-center">
-          <i class="fas fa-camera text-white text-sm"></i>
+        <div class="w-8 h-8 bg-[var(--accent)] flex items-center justify-center">
+          <i class="fas fa-camera text-white text-xs"></i>
         </div>
-        <span class="text-xl font-bold tracking-tight">Sooner Response</span>
+        <span class="text-[15px] font-semibold tracking-tight">Sooner Response</span>
       </a>
 
-      <!-- Desktop Nav -->
-      <div class="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest font-medium">
-        <a href="index.html" class="nav-link text-red-500">Home</a>
-        <a href="gallery.html" class="nav-link hover:text-red-500">Gallery</a>
-        <a href="services.html" class="nav-link hover:text-red-500">Services</a>
-        <a href="about.html" class="nav-link hover:text-red-500">About</a>
-        <a href="contact.html" class="nav-link hover:text-red-500">Contact</a>
+      <div class="hidden md:flex items-center gap-9">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </div>
 
-      <a href="contact.html" class="hidden md:inline-flex px-5 py-2.5 btn-primary rounded-full text-sm font-semibold">
+      <a href="contact.html" class="hidden md:inline-flex btn btn-primary text-[13px] py-2.5 px-5">
         Book a Shoot
       </a>
 
-      <!-- Mobile Menu Button -->
-      <button id="mobile-menu-btn" class="md:hidden text-2xl p-2" aria-label="Toggle menu">
+      <button id="mobile-menu-btn" class="md:hidden text-xl text-[var(--text-muted)] p-1" aria-label="Menu">
         <i class="fas fa-bars"></i>
       </button>
     </div>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden bg-zinc-950 border-t border-zinc-800">
-      <div class="flex flex-col px-6 py-6 gap-5 text-base">
-        <a href="index.html" class="hover:text-red-500">Home</a>
-        <a href="gallery.html" class="hover:text-red-500">Gallery</a>
-        <a href="services.html" class="hover:text-red-500">Services</a>
-        <a href="about.html" class="hover:text-red-500">About</a>
-        <a href="contact.html" class="hover:text-red-500">Contact</a>
-        <a href="contact.html" class="mt-2 block text-center py-3.5 btn-primary rounded-full font-semibold">
-          Book a Shoot
-        </a>
+    <div id="mobile-menu" class="md:hidden border-t border-[var(--border-subtle)] bg-[var(--bg)]">
+      <div class="flex flex-col px-6 py-6 gap-5">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="contact.html" class="btn btn-primary mt-2 justify-center">Book a Shoot</a>
       </div>
     </div>
   </nav>
 
   <!-- Hero -->
-  <section class="min-h-screen flex items-center relative overflow-hidden">
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(153,27,27,0.25)_0%,transparent_55%)]"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(30,64,175,0.2)_0%,transparent_50%)]"></div>
+  <section class="min-h-screen flex items-center relative">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_70%_20%,rgba(196,30,30,0.08),transparent)]"></div>
     
-    <div class="max-w-7xl mx-auto px-5 sm:px-6 pt-24 relative z-10 w-full">
-      <div class="max-w-3xl">
-        <p class="text-red-500 text-sm tracking-[0.2em] uppercase mb-6 font-medium">Oklahoma Public Safety Media</p>
-        <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold leading-[0.95] tracking-tighter mb-8">
-          CAPTURING<br>
-          OKLAHOMA'S<br>
-          <span class="bg-gradient-to-r from-red-500 via-blue-500 to-red-500 bg-clip-text text-transparent">HEROES</span>
+    <div class="max-w-6xl mx-auto px-6 pt-20 relative z-10 w-full">
+      <div class="max-w-2xl">
+        <p class="section-label mb-6">Oklahoma Public Safety Media</p>
+        <h1 class="text-5xl sm:text-6xl md:text-[4.5rem] font-semibold tracking-tight mb-8 text-balance">
+          Capturing<br>Oklahoma's<br>
+          <span class="text-[var(--accent)]">Heroes</span>
         </h1>
-        <p class="text-lg sm:text-xl text-zinc-400 mb-10 max-w-lg leading-relaxed">
-          Public safety photography dedicated to documenting the courage, skill, and service of Oklahoma's first responders.
+        <p class="text-lg text-[var(--text-muted)] mb-10 max-w-md leading-relaxed">
+          Documentary photography for fire, EMS, and law enforcement agencies across Oklahoma.
         </p>
         <div class="flex flex-wrap gap-4">
-          <a href="gallery.html" class="px-8 py-4 bg-white text-zinc-900 rounded-full font-semibold flex items-center gap-3 hover:bg-zinc-100 transition">
-            View Gallery <i class="fas fa-arrow-right text-sm"></i>
+          <a href="gallery.html" class="btn btn-primary">
+            View Gallery
+            <i class="fas fa-arrow-right text-xs"></i>
           </a>
-          <a href="contact.html" class="px-8 py-4 border border-white/25 rounded-full font-medium hover:bg-white/10 transition">
+          <a href="contact.html" class="btn btn-outline">
             Book a Shoot
           </a>
         </div>
       </div>
     </div>
 
-    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center text-zinc-500">
-      <span class="text-xs tracking-widest mb-2">SCROLL</span>
-      <i class="fas fa-chevron-down animate-bounce"></i>
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center text-[var(--text-faint)]">
+      <span class="text-[10px] tracking-[0.2em] mb-2">SCROLL</span>
+      <i class="fas fa-chevron-down text-sm animate-bounce"></i>
     </div>
   </section>
 
-  <!-- Quick Services Preview -->
-  <section class="py-24 border-t border-zinc-800">
-    <div class="max-w-7xl mx-auto px-5 sm:px-6">
-      <div class="text-center mb-16">
-        <span class="text-red-500 text-sm tracking-widest uppercase">What I Offer</span>
-        <h2 class="text-4xl sm:text-5xl font-bold tracking-tighter mt-3">Professional Services</h2>
+  <!-- Services Preview -->
+  <section class="py-28 border-t border-[var(--border-subtle)]">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="mb-16">
+        <p class="section-label mb-3">Services</p>
+        <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight">What I Offer</h2>
       </div>
 
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="service-card bg-zinc-900/80 border border-zinc-800 rounded-3xl p-8">
-          <div class="w-12 h-12 bg-red-600/15 rounded-2xl flex items-center justify-center text-red-500 text-xl mb-6">
+        <div class="card p-8">
+          <div class="service-icon bg-[rgba(196,30,30,0.12)] text-[var(--accent)] mb-6">
             <i class="fas fa-fire"></i>
           </div>
-          <h3 class="text-xl font-semibold mb-3">Incident Coverage</h3>
-          <p class="text-zinc-400 text-sm leading-relaxed">On-scene documentation of fires, rescues, training drills, and major incidents for agencies and public records.</p>
+          <h3 class="text-lg font-semibold mb-3">Incident Coverage</h3>
+          <p class="text-sm text-[var(--text-muted)] leading-relaxed">
+            On-scene documentation of fires, rescues, training drills, and major incidents for agencies and public records.
+          </p>
         </div>
 
-        <div class="service-card bg-zinc-900/80 border border-zinc-800 rounded-3xl p-8">
-          <div class="w-12 h-12 bg-blue-600/15 rounded-2xl flex items-center justify-center text-blue-500 text-xl mb-6">
+        <div class="card p-8">
+          <div class="service-icon bg-[rgba(29,78,216,0.12)] text-[var(--accent-blue)] mb-6">
             <i class="fas fa-user-shield"></i>
           </div>
-          <h3 class="text-xl font-semibold mb-3">Portraits & Teams</h3>
-          <p class="text-zinc-400 text-sm leading-relaxed">Individual and group portraits for recruitment, awards, recognition, and department branding.</p>
+          <h3 class="text-lg font-semibold mb-3">Portraits & Teams</h3>
+          <p class="text-sm text-[var(--text-muted)] leading-relaxed">
+            Individual and group portraits for recruitment, awards, recognition, and department branding.
+          </p>
         </div>
 
-        <div class="service-card bg-zinc-900/80 border border-zinc-800 rounded-3xl p-8">
-          <div class="w-12 h-12 bg-red-600/15 rounded-2xl flex items-center justify-center text-red-500 text-xl mb-6">
+        <div class="card p-8">
+          <div class="service-icon bg-[rgba(196,30,30,0.12)] text-[var(--accent)] mb-6">
             <i class="fas fa-video"></i>
           </div>
-          <h3 class="text-xl font-semibold mb-3">Video & Content</h3>
-          <p class="text-zinc-400 text-sm leading-relaxed">Short-form video for social media, recruitment campaigns, and community outreach.</p>
+          <h3 class="text-lg font-semibold mb-3">Video & Content</h3>
+          <p class="text-sm text-[var(--text-muted)] leading-relaxed">
+            Short-form video for social media, recruitment campaigns, and community outreach.
+          </p>
         </div>
       </div>
 
-      <div class="text-center mt-12">
-        <a href="services.html" class="inline-flex items-center gap-2 text-red-500 hover:text-red-400 font-medium">
-          View all services <i class="fas fa-arrow-right text-sm"></i>
+      <div class="mt-12">
+        <a href="services.html" class="btn btn-ghost text-sm">
+          View all services <i class="fas fa-arrow-right text-xs ml-1"></i>
         </a>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="py-24 bg-zinc-900">
-    <div class="max-w-3xl mx-auto px-5 text-center">
-      <h2 class="text-4xl sm:text-5xl font-bold tracking-tighter mb-6">Ready to Document Your Department?</h2>
-      <p class="text-zinc-400 text-lg mb-10">Whether it's training, incidents, or portraits — let's capture the moments that matter.</p>
-      <a href="contact.html" class="inline-block px-10 py-4 btn-primary rounded-full font-semibold text-lg">
+  <section class="py-28 bg-[var(--bg-elevated)] border-t border-[var(--border-subtle)]">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight mb-5">
+        Ready to document your department?
+      </h2>
+      <p class="text-[var(--text-muted)] mb-10 leading-relaxed">
+        Training, incidents, portraits — let's capture the moments that matter.
+      </p>
+      <a href="contact.html" class="btn btn-primary">
         Get In Touch
       </a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-zinc-950 border-t border-zinc-800 py-14">
-    <div class="max-w-7xl mx-auto px-5 sm:px-6">
-      <div class="flex flex-col md:flex-row justify-between items-center gap-10">
-        <div class="text-center md:text-left">
-          <div class="flex items-center justify-center md:justify-start gap-3 mb-3">
-            <div class="w-8 h-8 bg-gradient-to-br from-red-600 to-blue-600 rounded-xl flex items-center justify-center">
-              <i class="fas fa-camera text-white text-xs"></i>
+  <footer class="border-t border-[var(--border-subtle)] py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-10">
+        <div>
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-7 h-7 bg-[var(--accent)] flex items-center justify-center">
+              <i class="fas fa-camera text-white text-[10px]"></i>
             </div>
-            <span class="text-lg font-bold tracking-tight">Sooner Response</span>
+            <span class="text-sm font-semibold tracking-tight">Sooner Response</span>
           </div>
-          <p class="text-zinc-500 text-sm">Capturing Heroes Across Oklahoma</p>
+          <p class="text-xs text-[var(--text-faint)]">Capturing Heroes Across Oklahoma</p>
         </div>
 
-        <div class="flex flex-wrap justify-center gap-6 text-sm text-zinc-400">
-          <a href="index.html">Home</a>
-          <a href="gallery.html">Gallery</a>
-          <a href="services.html">Services</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
+        <div class="flex flex-wrap gap-x-8 gap-y-3">
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="gallery.html" class="footer-link">Gallery</a>
+          <a href="services.html" class="footer-link">Services</a>
+          <a href="about.html" class="footer-link">About</a>
+          <a href="contact.html" class="footer-link">Contact</a>
         </div>
 
-        <div class="text-center md:text-right">
-          <div class="flex justify-center md:justify-end gap-5 text-xl mb-3">
-            <a href="https://www.facebook.com/profile.php?id=61590723851659" target="_blank" rel="noopener" class="hover:text-red-500"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/soonerresponsepics" target="_blank" rel="noopener" class="hover:text-red-500"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@soonerresponse" target="_blank" rel="noopener" class="hover:text-red-500"><i class="fab fa-tiktok"></i></a>
-          </div>
-          <p class="text-xs text-zinc-600">&copy; 2026 Sooner Response Photography</p>
+        <div class="flex items-center gap-5">
+          <a href="https://www.facebook.com/profile.php?id=61590723851659" target="_blank" rel="noopener" class="text-[var(--text-muted)] hover:text-white transition text-lg">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/soonerresponsepics" target="_blank" rel="noopener" class="text-[var(--text-muted)] hover:text-white transition text-lg">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.tiktok.com/@soonerresponse" target="_blank" rel="noopener" class="text-[var(--text-muted)] hover:text-white transition text-lg">
+            <i class="fab fa-tiktok"></i>
+          </a>
         </div>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-[var(--border-subtle)] text-center">
+        <p class="text-xs text-[var(--text-faint)]">&copy; 2026 Sooner Response Photography. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
-  <!-- Back to Top -->
-  <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 btn-primary rounded-full flex items-center justify-center shadow-xl z-40" aria-label="Back to top">
-    <i class="fas fa-arrow-up"></i>
+  <button id="back-to-top" class="fixed bottom-8 right-8 w-11 h-11 rounded flex items-center justify-center z-40" aria-label="Back to top">
+    <i class="fas fa-arrow-up text-sm"></i>
   </button>
 
   <script src="script.js"></script>
